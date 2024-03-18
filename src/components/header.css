@@ -1,0 +1,12 @@
+.header {
+  align-content: center;
+  background-color: hsl(0, 0%, 10%);
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1.75rem;
+}
+
+.dropdown-menu {
+  display: flex;
+}
