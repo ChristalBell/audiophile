@@ -1,0 +1,19 @@
+.home {
+  background-color: hsl(0, 0%, 11%);
+  color: hsl(0, 0%, 47%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: hsl(0, 0%, 100%);
+}
+
+h3 {
+  margin: 0;
+}
+
+p {
+  text-align: center;
+}

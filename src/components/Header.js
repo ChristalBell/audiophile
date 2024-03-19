@@ -17,15 +17,6 @@ const Header = () => {
         </Menu>
       </Dropdown>
 
-      {/* <div className="dropdown-menu">
-        <ul>
-          <li>Home</li>
-          <li>Headphones</li>
-          <li>Speakers</li>
-          <li>Earphones</li>
-        </ul>{" "}
-      </div> */}
-
       <div>
         <img src="./assets/shared/logo.svg" alt="audiophile logo" />
       </div>
