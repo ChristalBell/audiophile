@@ -26,7 +26,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Header />
         <Home />
-        <Products />
+        {/* <Products /> */}
       </ThemeProvider>
     </div>
   );

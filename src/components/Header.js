@@ -1,36 +1,38 @@
-import React, { useState } from "react";
 import "./header.css";
-import { ToggleButton } from "@mui/material";
+import { Dropdown } from "@mui/base/Dropdown";
+import { MenuButton as BaseMenuButton } from "@mui/base/MenuButton";
+import { MenuItem } from "@mui/material";
+import { Menu } from "@mui/base/Menu";
 
 const Header = () => {
-  const [checked, setChecked] = useState(false);
-
   return (
     <div className="header">
-      <ToggleButton
-        id="checkbox"
-        value="check"
-        selected={checked}
-        onChange={() => {
-          setChecked(!checked);
-        }}
-      >
-        X{" "}
-      </ToggleButton>
-      <div className="dropdown-menu">
+      <Dropdown>
+        <BaseMenuButton>X </BaseMenuButton>
+        <Menu id="dropdown">
+          <MenuItem>Home</MenuItem>
+          <MenuItem>Headphones</MenuItem>
+          <MenuItem>Speakers</MenuItem>
+          <MenuItem>Earphones</MenuItem>
+        </Menu>
+      </Dropdown>
+
+      {/* <div className="dropdown-menu">
         <ul>
           <li>Home</li>
           <li>Headphones</li>
           <li>Speakers</li>
           <li>Earphones</li>
         </ul>{" "}
+      </div> */}
+
+      <div>
+        <img src="./assets/shared/logo.svg" alt="audiophile logo" />
       </div>
 
       <div>
-        <img src=".../logo.svg" alt="audiophile logo" />
+        <img src="./assets/shared/icon-cart.svg" alt="cart" />
       </div>
-
-      <div>cart</div>
     </div>
   );
 };
