@@ -1,6 +1,6 @@
 .header {
   align-content: center;
-  background-color: hsl(0, 0%, 10%);
+  background-color: orange;
   color: hsl(0, 0%, 100%);
   display: flex;
   justify-content: space-between;
@@ -8,5 +8,9 @@
 }
 
 .dropdown-menu {
+  display: none;
+}
+
+#checkbox:checked ~ .dropdown-menu {
   display: flex;
 }
