@@ -5,6 +5,10 @@ import "./home.css";
 const Home = () => {
   return (
     <div className="home">
+      <img
+        src="./assets/product-xx99-mark-two-headphones/mobile/image-product.jpg"
+        alt="headphone"
+      />
       <h3>New Product</h3>
       <h1>xx99 mark ii headphone</h1>
       <p>
