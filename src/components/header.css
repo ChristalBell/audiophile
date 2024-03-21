@@ -1,37 +1,26 @@
+/* mobile (default) styles  */
 .header {
   align-content: center;
   background-color: hsl(0, 0%, 10%);
   color: hsl(0, 0%, 100%);
   display: flex;
   justify-content: space-between;
-  padding: 2rem 1.75rem;
+  padding: 3rem 1.75rem;
+  text-transform: uppercase;
 }
 
-/* mobile (default) styles  */
-
-#dropdown {
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 0.15rem;
-  color: hsl(0, 0%, 10%);
-  /* box-shadow: 0rem 0.5rem hsl(0, 0%, 94%); */
+.dropdown {
+  @media screen and (min-width: 1023px) {
+    display: none;
+  }
 }
-
-/* tablet styles same as mobile change spacing/ grouping  */
+/* tablet styles  */
 
 /* desktop styles  */
-.largerheader {
+.desktop-header {
   display: none;
 
   @media screen and (min-width: 1024px) {
     display: block;
   }
-}
-ul {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-}
-
-li {
-  padding-left: 2rem;
 }

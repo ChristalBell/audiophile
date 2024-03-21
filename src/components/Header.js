@@ -1,58 +1,85 @@
 import "./header.css";
 import { Dropdown } from "@mui/base/Dropdown";
 import { MenuButton as BaseMenuButton } from "@mui/base/MenuButton";
-import { MenuItem } from "@mui/material";
+import { Link, MenuItem, Paper } from "@mui/material";
 import { Menu } from "@mui/base/Menu";
-
+import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 const Header = () => {
   return (
     <div className="header">
-      <Dropdown>
-        <BaseMenuButton> X </BaseMenuButton>
-        <Menu id="dropdown">
-          <MenuItem>Home</MenuItem>
-          <MenuItem>Headphones</MenuItem>
-          <MenuItem>Speakers</MenuItem>
-          <MenuItem>Earphones</MenuItem>
-        </Menu>
-      </Dropdown>
-
-      <div>
-        {" "}
-        <a href="#" alt="home">
-          <img src="./assets/shared/logo.svg" alt="audiophile logo" />{" "}
-        </a>
+      <div className="dropdown">
+        <Dropdown>
+          <BaseMenuButton>
+            <MenuOutlinedIcon />
+          </BaseMenuButton>
+          <Menu>
+            <Paper
+              variant="elevation=2"
+              square={false}
+              backgroundColor="primary.light"
+            >
+              <MenuItem>
+                <Link href="/home" color="inherit" underline="none">
+                  home
+                </Link>
+              </MenuItem>
+              <MenuItem>
+                {" "}
+                <Link href="/headphones" color="inherit" underline="none">
+                  headphones
+                </Link>
+              </MenuItem>
+              <MenuItem>
+                {" "}
+                <Link href="/speakers" color="inherit" underline="none">
+                  speakers
+                </Link>
+              </MenuItem>
+              <MenuItem>
+                {" "}
+                <Link href="/earphones" color="inherit" underline="none">
+                  earphones
+                </Link>
+              </MenuItem>
+            </Paper>
+          </Menu>
+        </Dropdown>
       </div>
 
-      {/* Hide for tablet and larger  */}
-      <div className="largerheader">
-        <ul>
-          <li>
-            <a href="#" alt="home">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#" alt="headphones">
-              Headphones
-            </a>
-          </li>
-          <li>
-            <a href="#" alt="speakers">
-              Speakers
-            </a>
-          </li>
-          <li>
-            <a href="#" alt="earphones">
-              Earphones
-            </a>
-          </li>
-        </ul>
-      </div>
       <div>
-        <a href="#" alt="cart">
-          <img src="./assets/shared/icon-cart.svg" alt="cart" />{" "}
-        </a>
+        <Link href="/home" color="inherit">
+          <img src="./assets/shared/logo.svg" alt="audiophile logo" />
+        </Link>
+      </div>
+
+      {/* Hide for tablet and smaller  */}
+      <div className="desktop-header">
+        <Link href="/home" color="inherit" underline="none">
+          home
+        </Link>
+        <Link
+          href="/headphones"
+          color="inherit"
+          underline="none"
+          sx={{
+            pl: 2,
+          }}
+        >
+          headphones
+        </Link>
+        <Link href="/speakers" color="inherit" underline="none">
+          speakers
+        </Link>
+        <Link href="/earphones" color="inherit" underline="none">
+          earphones
+        </Link>
+      </div>
+
+      <div>
+        <Link href="/cart" color="inherit">
+          {" "}
+          <img src="./assets/shared/icon-cart.svg" alt="cart" />
+        </Link>
       </div>
     </div>
   );
