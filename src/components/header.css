@@ -7,9 +7,31 @@
   padding: 2rem 1.75rem;
 }
 
+/* mobile (default) styles  */
+
 #dropdown {
   background-color: hsl(0, 0%, 100%);
   border-radius: 0.15rem;
-  /* box-shadow: 0rem 0.5rem hsl(0, 0%, 94%); */
   color: hsl(0, 0%, 10%);
+  /* box-shadow: 0rem 0.5rem hsl(0, 0%, 94%); */
+}
+
+/* tablet styles same as mobile change spacing/ grouping  */
+
+/* desktop styles  */
+.largerheader {
+  display: none;
+
+  @media screen and (min-width: 1024px) {
+    display: block;
+  }
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+li {
+  padding-left: 2rem;
 }

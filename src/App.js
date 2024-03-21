@@ -12,12 +12,11 @@ function App() {
         main: "hsl(0, 0%, 10%)",
         light: "hsl(0, 0%, 98%)",
         dark: "hsl(0, 0%, 94%)",
+        contrastText: "hsl(0, 0%, 47%)",
       },
       secondary: {
-        main: "hsl(0, 0%, 5%)",
-        light: " hsl(0, 0%, 100%)",
-        dark: "hsl(0, 0%, 47%)",
-        contrastText: "hsl(24, 66%, 55%)",
+        main: "hsl(24, 66%, 55%)",
+        contrastText: "hsl(0, 0%, 100%)",
       },
     },
   });

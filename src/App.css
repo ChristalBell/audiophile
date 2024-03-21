@@ -4,9 +4,27 @@
 main = dark-grey: hsl(0, 0%, 10%);
 dark = light-grey: hsl(0, 0%, 94%);
 light = background-white: hsl(0, 0%, 98%);
-contrast = orange: hsl(24, 66%, 55%);
+contrastText = text-grey: hsl(0, 0%, 47%);
 
-Secondary 
+
+Secondary
+main = orange: hsl(24, 66%, 55%);
+contrastText = text-white: hsl(0, 0%, 100%);
+
+Text Colors 
 main = text-black: hsl(0, 0%, 5%);
 dark = text-grey: hsl(0, 0%, 47%);
 light = text-white: hsl(0, 0%, 100%); */
+
+/* Breakpoints */
+
+/* Phone = Small Device 767px and less
+@media screen and 
+(max-width:767px)
+
+Tablet =  Medium Device 768px-1023px 
+@media screen and 
+(min-width: 768px) and (max-width: 1023px) 
+
+Desktop = Large Device  1024px and more
+@media screen and (min-width: 1024px) */
