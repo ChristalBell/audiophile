@@ -1,45 +1,69 @@
 {
-  "product": "headphones",
-  "model": [
+  "product": [
     {
-      "title": "",
-      "description": "",
-      "price": 4,
-      "features": "",
-      "in the box": "",
-      "image": [
+      "type": "headphones",
+      "model": [
         {
-          "mobile": " ",
-          "tablet": " ",
-          "desktop": " "
+          "title": "",
+          "description": "",
+          "price": 4,
+          "features": "",
+          "in the box": "",
+          "image": [
+            {
+              "mobile": " ",
+              "tablet": " ",
+              "desktop": " "
+            }
+          ]
+        },
+        {
+          "title": "",
+          "description": "",
+          "price": 4,
+          "features": "",
+          "in the box": "",
+          "image": [
+            {
+              "mobile": " ",
+              "tablet": " ",
+              "desktop": " "
+            }
+          ]
+        },
+        {
+          "title": "",
+          "description": "",
+          "price": 4,
+          "features": "",
+          "in the box": "",
+          "image": [
+            {
+              "mobile": " ",
+              "tablet": " ",
+              "desktop": " "
+            }
+          ]
         }
       ]
     },
+
     {
-      "title": "",
-      "description": "",
-      "price": 4,
-      "features": "",
-      "in the box": "",
-      "image": [
+      "type2": "speakers",
+      "model": [
         {
-          "mobile": " ",
-          "tablet": " ",
-          "desktop": " "
-        }
-      ]
-    },
-    {
-      "title": "",
-      "description": "",
-      "price": 4,
-      "features": "",
-      "in the box": "",
-      "image": [
-        {
-          "mobile": " ",
-          "tablet": " ",
-          "desktop": " "
+          "title": "",
+          "description": "",
+          "price": 4,
+          "features": "",
+          "in the box": "",
+          "image": [
+            {
+              "mobile": " ",
+              "tablet": " ",
+              "desktop": " "
+            }
+          ]
         }
       ]
     }
