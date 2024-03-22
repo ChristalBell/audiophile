@@ -6,6 +6,7 @@
   display: flex;
   justify-content: space-between;
   padding: 1.75rem 2.5rem;
+  pointer-events: auto;
   text-transform: uppercase;
   width: auto;
 
