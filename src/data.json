@@ -49,7 +49,42 @@
     },
 
     {
-      "type2": "speakers",
+      "type": "speakers",
+      "model": [
+        {
+          "title": "",
+          "description": "",
+          "price": 4,
+          "features": "",
+          "in the box": "",
+          "image": [
+            {
+              "mobile": " ",
+              "tablet": " ",
+              "desktop": " "
+            }
+          ]
+        },
+
+        {
+          "title": "",
+          "description": "",
+          "price": 4,
+          "features": "",
+          "in the box": "",
+          "image": [
+            {
+              "mobile": " ",
+              "tablet": " ",
+              "desktop": " "
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "type": "earphones",
       "model": [
         {
           "title": "",
