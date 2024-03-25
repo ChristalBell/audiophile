@@ -11,7 +11,7 @@ const Header = () => {
         <div className="dropdown">
           <Dropdown>
             <BaseMenuButton>
-              <MenuOutlinedIcon />
+              <MenuOutlinedIcon sx={{ color: "red" }} />
             </BaseMenuButton>
             <Menu>
               <Paper
