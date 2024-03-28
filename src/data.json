@@ -1,7 +1,38 @@
-
         {
           "title": "",
-         " type": "headphones",
+         "type": "headphones",
+          "description": "",
+          "price": 4,
+          "features": "",
+          "in the box": "",
+          "image": [
+            {
+              "mobile": " ",
+              "tablet": " ",
+              "desktop": " "
+            }
+          ], 
+
+          {
+          "title": "",
+           "type": "headphones",
+          "description": "",
+          "price": 4,
+          "features": "",
+          "in the box": "",
+          "image": [
+            {
+              "mobile": " ",
+              "tablet": " ",
+              "desktop": " "
+            }
+          ]
+        },
+        
+
+              {
+          "title": "",
+          "type": "headphones",
           "description": "",
           "price": 4,
           "features": "",
@@ -15,47 +46,9 @@
           ]
         },
 
-
-
-
-
-
-        {
+               {
           "title": "",
-          "description": "",
-          "price": 4,
-          "features": "",
-          "in the box": "",
-          "image": [
-            {
-              "mobile": " ",
-              "tablet": " ",
-              "desktop": " "
-            }
-          ]
-        },
-        {
-          "title": "",
-          "description": "",
-          "price": 4,
-          "features": "",
-          "in the box": "",
-          "image": [
-            {
-              "mobile": " ",
-              "tablet": " ",
-              "desktop": " "
-            }
-          ]
-        }
-      ]
-    },
-
-    {
-      "type": "speakers",
-      "model": [
-        {
-          "title": "",
+          "type": "speakers",
           "description": "",
           "price": 4,
           "features": "",
@@ -69,8 +62,9 @@
           ]
         },
 
-        {
+                   {
           "title": "",
+          "type": "speakers",
           "description": "",
           "price": 4,
           "features": "",
@@ -82,15 +76,11 @@
               "desktop": " "
             }
           ]
-        }
-      ]
-    },
+        },
 
-    {
-      "type": "earphones",
-      "model": [
-        {
+            {
           "title": "",
+          "type": "earphones",
           "description": "",
           "price": 4,
           "features": "",
@@ -103,5 +93,9 @@
             }
           ]
         }
+        
+        }
+
+
       
 
