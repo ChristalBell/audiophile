@@ -1,101 +1,97 @@
-        {
-          "title": "",
-         "type": "headphones",
-          "description": "",
-          "price": 4,
-          "features": "",
-          "in the box": "",
-          "image": [
-            {
-              "mobile": " ",
-              "tablet": " ",
-              "desktop": " "
-            }
-          ], 
+[
+  {
+    "title": "xx99 mark ii headphones",
+    "type": "headphones",
+    "description": "The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.",
+    "price": 2999.0,
+    "features": "Featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for those who like to enjoy endless listening. It includes intuitive controls designed for any situation. Whether you're taking a business call or just in your own personal space, the auto on/ off and pause features ensure that you'll never miss a beat. The advanced Active Cancellation with built-in equalizer allow you to experience your audio world on your terms. It lets you enjoy your audio in peace, but quickly interact with your surroundings when you need to. Combined with Bluetooth 5.0 compliant connectivity and 17 hour battery life, the XX99 Mark II headphones gives you superior sound, cutting-edge technology, and modern design aesthetic. ",
+    "in the box": "1x Headphone Unit 2x Replacement Earcups 1x User Manual 1x 3.55 5m Audio Cable 1x Travel Bag",
+    "image": [
+      {
+        "mobile": "./assets/product-xx99-mark-two-headphones/mobile/image-product.jpg ",
+        "tablet": "./assets/product-xx99-mark-two-headphones/tablet/image-product.jpg  ",
+        "desktop": "./assets/product-xx99-mark-two-headphones/desktop/image-product.jpg  "
+      }
+    ]
+  },
 
-          {
-          "title": "",
-           "type": "headphones",
-          "description": "",
-          "price": 4,
-          "features": "",
-          "in the box": "",
-          "image": [
-            {
-              "mobile": " ",
-              "tablet": " ",
-              "desktop": " "
-            }
-          ]
-        },
-        
+  {
+    "title": "",
+    "type": "headphones",
+    "description": "",
+    "price": 4,
+    "features": "",
+    "in the box": "",
+    "image": [
+      {
+        "mobile": " ",
+        "tablet": " ",
+        "desktop": " "
+      }
+    ]
+  },
 
-              {
-          "title": "",
-          "type": "headphones",
-          "description": "",
-          "price": 4,
-          "features": "",
-          "in the box": "",
-          "image": [
-            {
-              "mobile": " ",
-              "tablet": " ",
-              "desktop": " "
-            }
-          ]
-        },
+  {
+    "title": "",
+    "type": "headphones",
+    "description": "",
+    "price": 4,
+    "features": "",
+    "in the box": "",
+    "image": [
+      {
+        "mobile": " ",
+        "tablet": " ",
+        "desktop": " "
+      }
+    ]
+  },
 
-               {
-          "title": "",
-          "type": "speakers",
-          "description": "",
-          "price": 4,
-          "features": "",
-          "in the box": "",
-          "image": [
-            {
-              "mobile": " ",
-              "tablet": " ",
-              "desktop": " "
-            }
-          ]
-        },
+  {
+    "title": "",
+    "type": "speakers",
+    "description": "",
+    "price": 4,
+    "features": "",
+    "in the box": "",
+    "image": [
+      {
+        "mobile": " ",
+        "tablet": " ",
+        "desktop": " "
+      }
+    ]
+  },
 
-                   {
-          "title": "",
-          "type": "speakers",
-          "description": "",
-          "price": 4,
-          "features": "",
-          "in the box": "",
-          "image": [
-            {
-              "mobile": " ",
-              "tablet": " ",
-              "desktop": " "
-            }
-          ]
-        },
+  {
+    "title": "",
+    "type": "speakers",
+    "description": "",
+    "price": 4,
+    "features": "",
+    "in the box": "",
+    "image": [
+      {
+        "mobile": " ",
+        "tablet": " ",
+        "desktop": " "
+      }
+    ]
+  },
 
-            {
-          "title": "",
-          "type": "earphones",
-          "description": "",
-          "price": 4,
-          "features": "",
-          "in the box": "",
-          "image": [
-            {
-              "mobile": " ",
-              "tablet": " ",
-              "desktop": " "
-            }
-          ]
-        }
-        
-        }
-
-
-      
-
+  {
+    "title": "",
+    "type": "earphones",
+    "description": "",
+    "price": 4,
+    "features": "",
+    "in the box": "",
+    "image": [
+      {
+        "mobile": " ",
+        "tablet": " ",
+        "desktop": " "
+      }
+    ]
+  }
+]
