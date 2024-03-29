@@ -1,7 +1,6 @@
-import { Button } from "@mui/material";
 import React from "react";
 import "./hero.css";
-import { LineWeight } from "@mui/icons-material";
+import SeeProductButton from "./SeeProductButton";
 
 const Hero = () => {
   return (
@@ -44,6 +43,9 @@ const Hero = () => {
           for the passionate music enthusiast.
         </p>
       </div>
+      <>
+        <SeeProductButton />
+      </>
     </div>
   );
 };
