@@ -1,7 +1,7 @@
 import "./header.css";
 import { Dropdown } from "@mui/base/Dropdown";
 import { MenuButton as BaseMenuButton } from "@mui/base/MenuButton";
-import { Link, MenuItem, Paper } from "@mui/material";
+import { Divider, Link, MenuItem, Paper } from "@mui/material";
 import { Menu } from "@mui/base/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 const Header = () => {
@@ -108,13 +108,14 @@ const Header = () => {
       </div>
 
       <div>
-        <hr
+        {/* <hr
           style={{
             border: "1px solid hsl(0, 0%, 94%)",
             margin: "0 8%",
             display: "flex",
           }}
-        ></hr>
+        ></hr> */}
+        <Divider variant="middle" />
       </div>
     </>
   );

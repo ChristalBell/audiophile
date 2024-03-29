@@ -4,13 +4,6 @@
   overflow: hidden;
 }
 
-/* .hero-overlay {
-  background-color: hsl(0, 0%, 10%);
-  opacity: 5%;
-  position: fixed;
-  pointer-events: none;
-} */
-
 .image-box {
   background-size: cover;
   width: 100vw;
@@ -20,7 +13,8 @@
 
 .hero-info {
   opacity: 90%;
-  margin-top: -14.5rem;
-  padding: 6rem 3rem;
+  margin-top: -16rem;
+  margin-bottom: 4rem;
+  padding: 6rem 4rem;
   text-align: center;
 }

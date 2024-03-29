@@ -6,7 +6,7 @@ import { LineWeight } from "@mui/icons-material";
 const Home = () => {
   return (
     <div className="home">
-      <div className="hero-overlay">
+      <div>
         <img
           className="image-box"
           src="./assets/shared/image-hero.jpg"
@@ -15,7 +15,7 @@ const Home = () => {
       </div>
 
       <div className="hero-info">
-        <h2
+        <h3
           style={{
             fontWeight: 300,
             letterSpacing: ".6rem ",
@@ -23,7 +23,7 @@ const Home = () => {
           }}
         >
           New Product
-        </h2>
+        </h3>
         <h1 style={{ color: "hsl(0, 0%, 100%)", textTransform: "uppercase" }}>
           xx99 mark ii headphone
         </h1>
