@@ -1,4 +1,4 @@
-.home {
+.hero {
   background-color: hsl(0, 0%, 10%);
   color: hsl(0, 0%, 47%);
   overflow: hidden;
@@ -7,14 +7,14 @@
 .image-box {
   background-size: cover;
   width: 100vw;
-  scale: 2.95;
-  translate: -13.5rem 6rem;
+  scale: 3;
+  translate: -12rem 6rem;
 }
 
 .hero-info {
   opacity: 90%;
-  margin-top: -16rem;
-  margin-bottom: 4rem;
-  padding: 6rem 4rem;
+  margin-top: -13.5rem;
+  margin-bottom: 2.5rem;
+  padding: 5rem 3.5rem;
   text-align: center;
 }

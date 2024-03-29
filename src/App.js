@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { ThemeProvider, createTheme } from "@mui/material";
 import Header from "./components/Header";
-import Home from "./components/Home";
+import Hero from "./components/Hero";
 import Products from "./components/Products";
 import {
   BrowserRouter as Router,
@@ -44,10 +44,10 @@ function App() {
           <Header />
           <Switch>
             <Route exact path="/">
-              <Home />
+              <Hero />
             </Route>
-            <Route exact path="/home">
-              <Home />
+            <Route exact path="/hero">
+              <Hero />
             </Route>
             <Route exact path="/headphones">
               <Products />

@@ -29,7 +29,7 @@ const Header = () => {
                 }}
               >
                 <MenuItem>
-                  <Link href="/home" color="inherit" underline="none">
+                  <Link href="/hero" color="inherit" underline="none">
                     home
                   </Link>
                 </MenuItem>
