@@ -30,13 +30,7 @@ function App() {
       shape: {
         borderRadius: ".15rem",
       },
-      breakpoints: {
-        values: {
-          mobile: "767",
-          tablet: " 1023",
-          desktop: "1024",
-        },
-      },
+
       button: {
         fontWeight: "300",
         textTransform: "uppercase",

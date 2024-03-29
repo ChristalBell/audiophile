@@ -9,7 +9,7 @@ const Home = () => {
       <div className="hero-overlay">
         <img
           className="image-box"
-          src="./assets/product-xx99-mark-two-headphones/mobile/image-product.jpg"
+          src="./assets/shared/image-hero.jpg"
           alt="headphone"
         />
       </div>
@@ -18,7 +18,7 @@ const Home = () => {
         <h2
           style={{
             fontWeight: 300,
-            letterSpacing: ".7rem ",
+            letterSpacing: ".6rem ",
             textTransform: "uppercase",
           }}
         >
@@ -29,8 +29,11 @@ const Home = () => {
         </h1>
         <p
           style={{
-            fontWeight: " 500",
-            lineHeight: "2rem",
+            color: "hsl(0,0%,73%)",
+
+            fontWeight: " 600",
+            lineHeight: "1.5rem",
+            translate: "0 -.5rem",
           }}
         >
           Experience natural, lifelike audio and exceptional build quality made

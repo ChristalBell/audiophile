@@ -3,7 +3,7 @@ import { Dropdown } from "@mui/base/Dropdown";
 import { MenuButton as BaseMenuButton } from "@mui/base/MenuButton";
 import { Link, MenuItem, Paper } from "@mui/material";
 import { Menu } from "@mui/base/Menu";
-import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import MenuIcon from "@mui/icons-material/Menu";
 const Header = () => {
   return (
     <>
@@ -11,7 +11,13 @@ const Header = () => {
         <div className="dropdown">
           <Dropdown>
             <BaseMenuButton>
-              <MenuOutlinedIcon sx={{ color: "red" }} />
+              <MenuIcon
+                sx={{
+                  backgroundColor: "primary.main",
+                  border: "",
+                  color: "primary.light",
+                }}
+              />
             </BaseMenuButton>
             <Menu>
               <Paper
