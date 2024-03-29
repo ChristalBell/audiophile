@@ -7,7 +7,12 @@ const SeeProductButton = () => {
       <Button
         variant="contained"
         color="secondary"
-        sx={{ borderRadius: "0.1rem", fontWeight: 600 }}
+        sx={{
+          borderRadius: "0.1rem",
+          fontWeight: 600,
+          marginTop: "1.25rem",
+          padding: "1rem 1.5rem",
+        }}
       >
         See Product
       </Button>
