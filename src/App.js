@@ -3,6 +3,7 @@ import "./App.css";
 import { ThemeProvider, createTheme } from "@mui/material";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Home from "./components/Home";
 import Products from "./components/Products";
 import {
   BrowserRouter as Router,
@@ -44,10 +45,10 @@ function App() {
           <Header />
           <Switch>
             <Route exact path="/">
-              <Hero />
+              <Home />
             </Route>
-            <Route exact path="/hero">
-              <Hero />
+            <Route exact path="/home">
+              <Home />
             </Route>
             <Route exact path="/headphones">
               <Products />
