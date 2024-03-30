@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 import { ThemeProvider, createTheme } from "@mui/material";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
 import Home from "./components/Home";
 import Products from "./components/Products";
 import {

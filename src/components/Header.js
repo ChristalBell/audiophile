@@ -4,7 +4,7 @@ import { MenuButton as BaseMenuButton } from "@mui/base/MenuButton";
 import { Divider, Link, MenuItem, Paper } from "@mui/material";
 import { Menu } from "@mui/base/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
-import Home from "./Home";
+
 const Header = () => {
   return (
     <>

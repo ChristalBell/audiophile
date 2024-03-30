@@ -3,6 +3,13 @@ import "./hero.css";
 import SeeProductButton from "./SeeProductButton";
 
 const Hero = () => {
+  const homebutton = [
+    {
+      textcolor: "secondary",
+      buttonstyle: "contained",
+    },
+  ];
+
   return (
     <div className="hero">
       <div>
@@ -43,7 +50,10 @@ const Hero = () => {
           for the passionate music enthusiast.
         </p>
         <div>
-          <SeeProductButton />
+          <SeeProductButton
+            textcolor={homebutton[0].textcolor}
+            buttonstyle={homebutton[0].buttonstyle}
+          />
         </div>
       </div>
     </div>

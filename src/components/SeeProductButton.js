@@ -1,12 +1,12 @@
 import { Button } from "@mui/material";
 import React from "react";
 
-const SeeProductButton = () => {
+const SeeProductButton = ({ textcolor, buttonstyle }) => {
   return (
     <div>
       <Button
-        variant="contained"
-        color="secondary"
+        color={textcolor}
+        variant={buttonstyle}
         sx={{
           borderRadius: "0.1rem",
           fontWeight: 600,

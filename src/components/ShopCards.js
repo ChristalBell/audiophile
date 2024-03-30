@@ -1,196 +1,42 @@
-import {
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Link,
-  Typography,
-} from "@mui/material";
 import React from "react";
+import ShopCardsInfo from "./ShopCardsInfo";
 
 const ShopCards = () => {
+  const shopInfo = [
+    {
+      pics: "./assets/shared/image-headphones.png",
+      title: "headphones",
+      link: "./headphones",
+    },
+    {
+      pics: "./assets/shared/image-speakers.png",
+      title: "speakers",
+      link: "./speakers",
+    },
+    {
+      pics: "./assets/shared/image-earphones.png",
+      title: "earphones",
+      link: "./earphones",
+    },
+  ];
+
   return (
     <div>
-      <Card
-        sx={{
-          alignItems: "center",
-          backgroundColor: "primary.dark",
-          display: "flex",
-
-          flexDirection: "column",
-          justifyContent: "center",
-
-          marginTop: "8rem",
-          marginRight: "2rem",
-          marginBottom: "4rem",
-          marginLeft: "2rem",
-
-          paddingTop: "6rem",
-          paddingBottom: "2rem",
-        }}
-      >
-        <CardMedia
-          image="./assets/shared/image-headphones.png"
-          title="Headphones"
-          sx={{
-            height: "10rem",
-            width: "8rem",
-            position: "absolute",
-            translate: "0 -9rem",
-          }}
-        />
-        <CardContent>
-          <Typography
-            variant="h5"
-            sx={{
-              fontWeight: "600",
-              letterSpacing: ".15rem",
-              textTransform: "uppercase",
-            }}
-          >
-            headphones
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button>
-            <Link
-              href="/headphones"
-              underline="none"
-              sx={{
-                color: "text.secondary",
-                fontWeight: "600",
-              }}
-            >
-              Shop
-              <img
-                src="./assets/shared/icon-arrow-right.svg"
-                alt="shop arrow"
-              />
-            </Link>
-          </Button>
-        </CardActions>
-      </Card>
-
-      <Card
-        sx={{
-          alignItems: "center",
-          backgroundColor: "primary.dark",
-          display: "flex",
-
-          flexDirection: "column",
-          justifyContent: "center",
-
-          marginTop: "8rem",
-          marginRight: "2rem",
-          marginBottom: "4rem",
-          marginLeft: "2rem",
-
-          paddingTop: "6rem",
-          paddingBottom: "2rem",
-        }}
-      >
-        <CardMedia
-          image="./assets/shared/image-speakers.png"
-          title="Speakers"
-          sx={{
-            height: "10rem",
-            width: "8rem",
-            position: "absolute",
-            translate: "0 -9rem",
-          }}
-        />
-        <CardContent>
-          <Typography
-            variant="h5"
-            sx={{
-              fontWeight: "600",
-              letterSpacing: ".15rem",
-              textTransform: "uppercase",
-            }}
-          >
-            speakers
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button>
-            <Link
-              href="/speakers"
-              underline="none"
-              sx={{
-                color: "text.secondary",
-                fontWeight: "600",
-              }}
-            >
-              Shop
-              <img
-                src="./assets/shared/icon-arrow-right.svg"
-                alt="shop arrow"
-              />
-            </Link>
-          </Button>
-        </CardActions>
-      </Card>
-
-      <Card
-        sx={{
-          alignItems: "center",
-          backgroundColor: "primary.dark",
-          display: "flex",
-
-          flexDirection: "column",
-          justifyContent: "center",
-
-          marginTop: "8rem",
-          marginRight: "2rem",
-          marginBottom: "4rem",
-          marginLeft: "2rem",
-
-          paddingTop: "6rem",
-          paddingBottom: "2rem",
-        }}
-      >
-        <CardMedia
-          image="./assets/shared/image-earphones.png"
-          title="Earphones"
-          sx={{
-            height: "10rem",
-            width: "8rem",
-            position: "absolute",
-            translate: "0 -9rem",
-          }}
-        />
-        <CardContent>
-          <Typography
-            variant="h5"
-            sx={{
-              fontWeight: "600",
-              letterSpacing: ".15rem",
-              textTransform: "uppercase",
-            }}
-          >
-            earphones
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button>
-            <Link
-              href="/earphones"
-              underline="none"
-              sx={{
-                color: "text.secondary",
-                fontWeight: "600",
-              }}
-            >
-              Shop
-              <img
-                src="./assets/shared/icon-arrow-right.svg"
-                alt="shop arrow"
-              />
-            </Link>
-          </Button>
-        </CardActions>
-      </Card>
+      <ShopCardsInfo
+        pics={shopInfo[0].pics}
+        title={shopInfo[0].title}
+        link={shopInfo[0].link}
+      />
+      <ShopCardsInfo
+        pics={shopInfo[1].pics}
+        title={shopInfo[1].title}
+        link={shopInfo[1].link}
+      />
+      <ShopCardsInfo
+        pics={shopInfo[2].pics}
+        title={shopInfo[2].title}
+        link={shopInfo[2].link}
+      />
     </div>
   );
 };
