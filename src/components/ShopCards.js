@@ -4,6 +4,7 @@ import {
   CardActions,
   CardContent,
   CardMedia,
+  Link,
   Typography,
 } from "@mui/material";
 import React from "react";
@@ -52,9 +53,21 @@ const ShopCards = () => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button sx={{ color: "text.secondary", fontWeight: "600" }}>
-            Shop
-            <img src="./assets/shared/icon-arrow-right.svg" alt="shop arrow" />
+          <Button>
+            <Link
+              href="/headphones"
+              underline="none"
+              sx={{
+                color: "text.secondary",
+                fontWeight: "600",
+              }}
+            >
+              Shop
+              <img
+                src="./assets/shared/icon-arrow-right.svg"
+                alt="shop arrow"
+              />
+            </Link>
           </Button>
         </CardActions>
       </Card>
@@ -100,9 +113,21 @@ const ShopCards = () => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button sx={{ color: "text.secondary", fontWeight: "600" }}>
-            Shop
-            <img src="./assets/shared/icon-arrow-right.svg" alt="shop arrow" />
+          <Button>
+            <Link
+              href="/speakers"
+              underline="none"
+              sx={{
+                color: "text.secondary",
+                fontWeight: "600",
+              }}
+            >
+              Shop
+              <img
+                src="./assets/shared/icon-arrow-right.svg"
+                alt="shop arrow"
+              />
+            </Link>
           </Button>
         </CardActions>
       </Card>
@@ -148,9 +173,21 @@ const ShopCards = () => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button sx={{ color: "text.secondary", fontWeight: "600" }}>
-            Shop
-            <img src="./assets/shared/icon-arrow-right.svg" alt="shop arrow" />
+          <Button>
+            <Link
+              href="/earphones"
+              underline="none"
+              sx={{
+                color: "text.secondary",
+                fontWeight: "600",
+              }}
+            >
+              Shop
+              <img
+                src="./assets/shared/icon-arrow-right.svg"
+                alt="shop arrow"
+              />
+            </Link>
           </Button>
         </CardActions>
       </Card>

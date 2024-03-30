@@ -53,6 +53,12 @@ function App() {
             <Route exact path="/headphones">
               <Products />
             </Route>
+            <Route exact path="/speakers">
+              <Products />
+            </Route>
+            <Route exact path="/earphones">
+              <Products />
+            </Route>
           </Switch>
 
           {/* <Products /> */}
