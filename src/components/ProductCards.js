@@ -24,11 +24,11 @@ const ProductCards = () => {
 
   const spbutton = [
     {
-      textcolor: "text.secondary",
+      textcolor: "primary",
       buttonstyle: "contained",
     },
     {
-      textcolor: "text.primary",
+      textcolor: "primary",
       buttonstyle: "outlined",
     },
   ];
@@ -40,22 +40,24 @@ const ProductCards = () => {
         display={moreCards[1].display}
         model={moreCards[0].model}
         pitch={moreCards[0].pitch}
-      />
-      <SeeProductButton
-        color={spbutton[0].textcolor}
-        variant={spbutton[0].buttonstyle}
+        textcolor={spbutton[0].textcolor}
+        buttonstyle={spbutton[0].buttonstyle}
       />
 
       <ProductCardsInfo
         display={moreCards[1].display}
         model={moreCards[1].model}
         pitch={moreCards[1].pitch}
+        textcolor={spbutton[1].textcolor}
+        buttonstyle={spbutton[1].buttonstyle}
       />
 
       <ProductCardsInfo
         display={moreCards[2].display}
         model={moreCards[2].model}
         pitch={moreCards[2].pitch}
+        textcolor={spbutton[1].textcolor}
+        buttonstyle={spbutton[1].buttonstyle}
       />
     </div>
   );

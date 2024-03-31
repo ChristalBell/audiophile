@@ -16,6 +16,7 @@ const ShopCardsInfo = ({ pics, title, link }) => {
         sx={{
           alignItems: "center",
           backgroundColor: "primary.dark",
+          borderRadius: ".25rem",
           display: "flex",
 
           flexDirection: "column",
