@@ -9,6 +9,7 @@ import {
   Route,
   Switch,
 } from "react-router-dom/cjs/react-router-dom.min";
+import Footer from "./components/Footer";
 
 function App() {
   const theme = createTheme({
@@ -59,6 +60,7 @@ function App() {
               <Products />
             </Route>
           </Switch>
+          <Footer />
 
           {/* <Products /> */}
         </ThemeProvider>
