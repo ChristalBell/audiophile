@@ -153,12 +153,12 @@
     "description": "Stream high quality sound wirelessly with minimal to no loss. The ZX7 Speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
     "price": 3500.0,
     "features": "Reap the advantages of a flat diaphragm tweeter cone. This provides a fast response rate and excellent high frequencies that lower tiered bookshelf speakers cannot provide. The woofers are made from aluminum that produces a unique and clear sound. XLR inputs allow you to connect to a mixer for more advanced usage. The ZX7 speaker is the blend of stylish design and high performance. It houses an encased MDF wooden enclosure which minimises acoustic resonance. Dual connectivity allow pairing through Bluetooth or traditional optical and RCA input. Switch input sources and control volume at your finger tips with the included wireless remote. This versatile speaker is equipped to deliver an authentic listening experience.",
-    "in the box": "",
+    "in the box": "2x Speaker Unit 2x Speaker Cloth Panel 1x User Manual 1x 3.5mm 7.5 Audio Cable 1x 7.5m Optical Cable",
     "image": [
       {
-        "mobile": "./assets/product-zx7-speaker/mobile/images-product.jpg ",
-        "tablet": " ./assets/product-zx7-speaker/tablet/images-product.jpg",
-        "desktop": "./assets/product-zx7-speaker/desktop/images-product.jpg "
+        "mobile": "./assets/product-zx7-speaker/mobile/image-product.jpg",
+        "tablet": "./assets/product-zx7-speaker/tablet/image-product.jpg",
+        "desktop": "./assets/product-zx7-speaker/desktop/image-product.jpg"
       }
     ],
     "gallery mobile": [

@@ -1,6 +1,5 @@
 import React from "react";
 import ProductCardsInfo from "./ProductCardsInfo";
-import SeeProductButton from "./SeeProductButton";
 
 const ProductCards = () => {
   const moreCards = [
