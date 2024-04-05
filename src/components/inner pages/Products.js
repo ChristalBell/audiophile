@@ -1,11 +1,11 @@
 import React from "react";
-import data from "../data.json";
-import SeeProductButton from "./SeeProductButton";
-import ShopCards from "./ShopCards";
-import Ad from "./Ad";
+import data from "../../data.json";
+import SeeProductButton from "../SeeProductButton";
+import ShopCards from "../ShopCards";
+import Ad from "../Ad";
 
 import { Typography } from "@mui/material";
-import GoBackButton from "./GoBackButton";
+import GoBackButton from "../GoBackButton";
 
 const Products = () => {
   console.log(data);
@@ -31,7 +31,7 @@ const Products = () => {
       >
         <img
           src={data[0].image[0].mobile}
-          alt="headphones"
+          alt={data[0].type}
           style={{ borderRadius: ".25rem", height: "24rem", width: "24rem" }}
         />
 

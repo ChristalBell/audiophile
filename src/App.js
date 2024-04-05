@@ -3,7 +3,7 @@ import "./App.css";
 import { ThemeProvider, createTheme } from "@mui/material";
 import Header from "./components/Header";
 import Home from "./components/Home";
-import Products from "./components/Products";
+import Products from "./components/inner pages/Products";
 import {
   BrowserRouter as Router,
   Route,
