@@ -1,7 +1,7 @@
 import React from "react";
 import data from "../../data.json";
 import SeeProductButton from "../SeeProductButton";
-import { Typography } from "@mui/material";
+import { Modal, Typography } from "@mui/material";
 
 const Products = ({ image, type, title, description }) => {
   console.log(data);
@@ -9,6 +9,7 @@ const Products = ({ image, type, title, description }) => {
     {
       textcolor: "secondary",
       buttonstyle: "contained",
+      link: <Modal />,
     },
   ];
   return (
@@ -58,6 +59,7 @@ const Products = ({ image, type, title, description }) => {
         <SeeProductButton
           textcolor={spbutton[0].textcolor}
           buttonstyle={spbutton[0].buttonstyle}
+          link={spbutton[0].link}
         />
       </div>
     </div>

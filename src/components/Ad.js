@@ -2,7 +2,7 @@ import React from "react";
 
 const Ad = () => {
   return (
-    <div style={{ textAlign: "center", marginLeft: "2rem" }}>
+    <div style={{ textAlign: "center" }}>
       <img
         src="./assets/shared/image-best-gear.jpg"
         alt="best gear ad"

@@ -1,7 +1,8 @@
 import { Button } from "@mui/material";
 import React from "react";
+import Link from "@mui/material/Link";
 
-const SeeProductButton = ({ textcolor, buttonstyle }) => {
+const SeeProductButton = ({ textcolor, buttonstyle, link }) => {
   return (
     <div>
       <Button
@@ -14,7 +15,16 @@ const SeeProductButton = ({ textcolor, buttonstyle }) => {
           padding: "1rem 1.5rem",
         }}
       >
-        See Product
+        <Link
+          href={link}
+          underline="none"
+          sx={{
+            color: "text.secondary",
+            fontWeight: "600",
+          }}
+        >
+          See Product
+        </Link>
       </Button>
     </div>
   );

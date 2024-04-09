@@ -12,6 +12,7 @@ import {
 import Footer from "./components/Footer";
 import Headphones from "./components/inner pages/Headphones";
 import Speakers from "./components/inner pages/Speakers";
+import Cart from "./components/checkout/Cart";
 
 function App() {
   const theme = createTheme({
@@ -60,6 +61,9 @@ function App() {
             </Route>
             <Route exact path="/earphones">
               <Earphones />
+            </Route>
+            <Route exact path="/cart">
+              <Cart />
             </Route>
           </Switch>
           <Footer />
