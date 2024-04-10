@@ -11,7 +11,7 @@ const Footer = () => {
         display: "flex",
         flexDirection: "column",
         padding: "2rem",
-        marginTop: "8rem",
+        // marginTop: "8rem",
       }}
     >
       <h1>
