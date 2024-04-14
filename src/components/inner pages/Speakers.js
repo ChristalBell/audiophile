@@ -1,9 +1,9 @@
 import React from "react";
 import Products from "./Products";
 import data from "../../data.json";
-import GoBackButton from "../GoBackButton";
-import CategoryCard from "../CategoryCard";
-import Ad from "../Ad";
+import CategoryCard from "../cards/CategoryCard";
+import GoBackButton from "../shared/GoBackButton";
+import Ad from "../shared/Ad";
 
 const Speakers = () => {
   return (

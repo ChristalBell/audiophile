@@ -1,9 +1,9 @@
 import React from "react";
 import Products from "./Products";
 import data from "../../data.json";
-import GoBackButton from "../GoBackButton";
-import CategoryCard from "../CategoryCard";
-import Ad from "../Ad";
+import GoBackButton from "../shared/GoBackButton";
+import CategoryCard from "../cards/CategoryCard";
+import Ad from "../shared/Ad";
 import Model from "./Model";
 
 const Earphones = () => {

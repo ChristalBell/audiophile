@@ -1,8 +1,8 @@
 import React from "react";
 import data from "../../data.json";
-import DirectProductCard from "../DirectProductCard";
-import CategoryCard from "../CategoryCard";
-import Ad from "../Ad";
+import DirectProductCard from "../cards/DirectProductCard";
+import CategoryCard from "../cards/CategoryCard";
+import Ad from "../shared/Ad";
 
 const Model = (image, type, title, description, price, features, box, link) => {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
 import Hero from "./Hero";
-import CategoryCard from "./CategoryCard";
-import DirectProductCard from "./DirectProductCard";
-import Ad from "./Ad";
+import CategoryCard from "../cards/CategoryCard";
+import DirectProductCard from "../cards/DirectProductCard";
+import Ad from "../shared/Ad";
 
 const Home = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import "./hero.css";
-import SeeProductButton from "./DirectLinkButton";
+import DirectLinkButton from "../cards/DirectLinkButton";
 
 const Hero = () => {
   const homebutton = [
@@ -50,7 +50,7 @@ const Hero = () => {
           for the passionate music enthusiast.
         </p>
         <div>
-          <SeeProductButton
+          <DirectLinkButton
             textcolor={homebutton[0].textcolor}
             buttonstyle={homebutton[0].buttonstyle}
           />

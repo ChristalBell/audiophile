@@ -1,15 +1,15 @@
 import React from "react";
 import "./App.css";
 import { ThemeProvider, createTheme } from "@mui/material";
-import Header from "./components/Header";
-import Home from "./components/Home";
+import Header from "./components/shared/Header";
+import Home from "./components/home/Home";
 import Earphones from "./components/inner pages/Earphones";
 import {
   BrowserRouter as Router,
   Route,
   Switch,
 } from "react-router-dom/cjs/react-router-dom.min";
-import Footer from "./components/Footer";
+import Footer from "./components/shared/Footer";
 import Headphones from "./components/inner pages/Headphones";
 import Speakers from "./components/inner pages/Speakers";
 import Cart from "./components/checkout/Cart";
