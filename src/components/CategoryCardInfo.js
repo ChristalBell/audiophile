@@ -9,7 +9,7 @@ import {
   Button,
 } from "@mui/material";
 
-const ShopCardsInfo = ({ pics, title, link }) => {
+const CategoryCardInfo = ({ pics, title, link }) => {
   return (
     <div>
       <Card
@@ -76,4 +76,4 @@ const ShopCardsInfo = ({ pics, title, link }) => {
   );
 };
 
-export default ShopCardsInfo;
+export default CategoryCardInfo;

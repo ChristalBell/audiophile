@@ -1,12 +1,6 @@
-import {
-  Card,
-  CardMedia,
-  CardContent,
-  CardActions,
-  Typography,
-} from "@mui/material";
+import { Card, CardContent, CardActions, Typography } from "@mui/material";
 import React from "react";
-import SeeProductButton from "./SeeProductButton";
+import DirectLinkButton from "./DirectLinkButton";
 
 const ProductCardsInfo = ({
   display,
@@ -48,15 +42,6 @@ const ProductCardsInfo = ({
           paddingLeft: "1.25rem",
         }}
       >
-        {/* <CardMedia
-          image={display}
-          title={model}
-          sx={{
-            height: "22.5rem",
-            width: "8rem",
-            position: "absolute",
-          }}
-        /> */}
         <CardContent>
           <Typography
             variant="h5"
@@ -67,7 +52,7 @@ const ProductCardsInfo = ({
           <Typography>{pitch}</Typography>
         </CardContent>
         <CardActions>
-          <SeeProductButton buttonstyle={buttonstyle} textcolor={textcolor} />
+          <DirectLinkButton buttonstyle={buttonstyle} textcolor={textcolor} />
         </CardActions>
       </Card>
     </div>

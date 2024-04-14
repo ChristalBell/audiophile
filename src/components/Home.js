@@ -1,15 +1,15 @@
 import React from "react";
 import Hero from "./Hero";
-import ShopCards from "./ShopCards";
-import ProductCards from "./ProductCards";
+import CategoryCard from "./CategoryCard";
+import DirectProductCard from "./DirectProductCard";
 import Ad from "./Ad";
 
 const Home = () => {
   return (
     <div>
       <Hero />
-      <ShopCards />
-      <ProductCards />
+      <CategoryCard />
+      <DirectProductCard />
       <Ad />
     </div>
   );

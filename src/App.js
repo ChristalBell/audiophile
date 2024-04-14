@@ -67,8 +67,6 @@ function App() {
             </Route>
           </Switch>
           <Footer />
-
-          {/* <Products /> */}
         </ThemeProvider>
       </div>
     </Router>

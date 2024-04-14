@@ -1,6 +1,6 @@
 import React from "react";
 import "./hero.css";
-import SeeProductButton from "./SeeProductButton";
+import SeeProductButton from "./DirectLinkButton";
 
 const Hero = () => {
   const homebutton = [

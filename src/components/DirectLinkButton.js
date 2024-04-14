@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 import React from "react";
 import Link from "@mui/material/Link";
 
-const SeeProductButton = ({ textcolor, buttonstyle, link }) => {
+const DirectLinkButton = ({ textcolor, buttonstyle, link }) => {
   return (
     <div>
       <Button
@@ -30,4 +30,4 @@ const SeeProductButton = ({ textcolor, buttonstyle, link }) => {
   );
 };
 
-export default SeeProductButton;
+export default DirectLinkButton;

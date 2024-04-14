@@ -1,7 +1,7 @@
 import React from "react";
 import ProductCardsInfo from "./ProductCardsInfo";
 
-const ProductCards = () => {
+const DirectProductCard = () => {
   const moreCards = [
     {
       display: "./assets/shared/image-speakers.png",
@@ -36,7 +36,7 @@ const ProductCards = () => {
       {/* double height of other two product cards */}
 
       <ProductCardsInfo
-        display={moreCards[1].display}
+        display={moreCards[0].display}
         model={moreCards[0].model}
         pitch={moreCards[0].pitch}
         textcolor={spbutton[0].textcolor}
@@ -62,4 +62,4 @@ const ProductCards = () => {
   );
 };
 
-export default ProductCards;
+export default DirectProductCard;

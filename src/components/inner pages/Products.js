@@ -1,6 +1,6 @@
 import React from "react";
 import data from "../../data.json";
-import SeeProductButton from "../SeeProductButton";
+import DirectLinkButton from "../DirectLinkButton";
 import { Modal, Typography } from "@mui/material";
 
 const Products = ({ image, type, title, description }) => {
@@ -56,7 +56,7 @@ const Products = ({ image, type, title, description }) => {
         >
           {description}
         </p>
-        <SeeProductButton
+        <DirectLinkButton
           textcolor={spbutton[0].textcolor}
           buttonstyle={spbutton[0].buttonstyle}
           link={spbutton[0].link}

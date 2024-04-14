@@ -1,13 +1,13 @@
 import React from "react";
 import data from "../../data.json";
-import ProductCards from "../ProductCards";
-import ShopCards from "../ShopCards";
+import DirectProductCard from "../DirectProductCard";
+import CategoryCard from "../CategoryCard";
 import Ad from "../Ad";
 
 const Model = (image, type, title, description, price, features, box, link) => {
   return (
     <div>
-      <h1>Hello world</h1>
+      <h1>Hello World </h1>
       {/* <Route exact path="/headphones">
               <Headphones />
             </Route> */}
@@ -40,8 +40,8 @@ const Model = (image, type, title, description, price, features, box, link) => {
 
       <>
         <h2>You May Also Like</h2>
-        <ProductCards />
-        <ShopCards />
+        <DirectProductCard />
+        <CategoryCard />
         <Ad />
       </> */}
     </div>

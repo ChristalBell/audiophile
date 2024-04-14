@@ -1,7 +1,7 @@
 import React from "react";
-import ShopCardsInfo from "./ShopCardsInfo";
+import CategoryCardInfo from "./CategoryCardInfo";
 
-const ShopCards = () => {
+const CategoryCard = () => {
   const shopInfo = [
     {
       pics: "./assets/shared/image-headphones.png",
@@ -22,17 +22,17 @@ const ShopCards = () => {
 
   return (
     <div>
-      <ShopCardsInfo
+      <CategoryCardInfo
         pics={shopInfo[0].pics}
         title={shopInfo[0].title}
         link={shopInfo[0].link}
       />
-      <ShopCardsInfo
+      <CategoryCardInfo
         pics={shopInfo[1].pics}
         title={shopInfo[1].title}
         link={shopInfo[1].link}
       />
-      <ShopCardsInfo
+      <CategoryCardInfo
         pics={shopInfo[2].pics}
         title={shopInfo[2].title}
         link={shopInfo[2].link}
@@ -41,4 +41,4 @@ const ShopCards = () => {
   );
 };
 
-export default ShopCards;
+export default CategoryCard;
