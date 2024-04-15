@@ -4,10 +4,11 @@ import DirectProductCard from "../cards/DirectProductCard";
 import CategoryCard from "../cards/CategoryCard";
 import Ad from "../shared/Ad";
 
-const Model = (image, type, title, description, price, features, box, link) => {
+// image, type, title, description, price, features, box, link
+const Model = () => {
   return (
     <div>
-      <h1>Hello World </h1>
+      <p>hello world</p>
       {/* <Route exact path="/headphones">
               <Headphones />
             </Route> */}

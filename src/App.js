@@ -13,6 +13,7 @@ import Footer from "./components/shared/Footer";
 import Headphones from "./components/inner pages/Headphones";
 import Speakers from "./components/inner pages/Speakers";
 import Cart from "./components/checkout/Cart";
+import Model from "./components/inner pages/Model";
 
 function App() {
   const theme = createTheme({
@@ -62,6 +63,11 @@ function App() {
             <Route exact path="/earphones">
               <Earphones />
             </Route>
+
+            <Route exact path="/earphones/yx1wirelessearphones">
+              <Model />
+            </Route>
+
             <Route exact path="/cart">
               <Cart />
             </Route>
