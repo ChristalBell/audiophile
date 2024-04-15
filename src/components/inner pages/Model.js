@@ -12,29 +12,29 @@ const Model = () => {
       {/* <Route exact path="/headphones">
               <Headphones />
             </Route> */}
-      {/* <>
+      <>
         <img
-          src={image}
-          alt={type}
+          src={data[5].image}
+          alt={data[5].type}
           style={{ borderRadius: ".25rem", height: "24rem", width: "24rem" }}
         />
       </>
 
       <>
-        <h1>{title}</h1>
-        <p>{description}</p>
-        <h5>{price}</h5>
+        <h1>{data[5].title}</h1>
+        <p>{data[5].description}</p>
+        <h5>${data[5].price}</h5>
         Add to Cart Component
       </>
 
       <>
         <h2>Features</h2>
-        <p>{features}</p>{" "}
+        <p>{data[5].features}</p>{" "}
       </>
 
       <>
         <h2>In The Box</h2>
-        {box}
+        {data[5]["in the box"]}
       </>
 
       <>Gallery Component </>
@@ -44,7 +44,7 @@ const Model = () => {
         <DirectProductCard />
         <CategoryCard />
         <Ad />
-      </> */}
+      </>
     </div>
   );
 };
