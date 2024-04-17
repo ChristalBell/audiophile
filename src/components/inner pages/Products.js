@@ -9,7 +9,7 @@ const Products = ({ image, type, title, description }) => {
     {
       textcolor: "secondary",
       buttonstyle: "contained",
-      link: <Modal />,
+      link: data.slug,
     },
   ];
   return (
@@ -56,11 +56,11 @@ const Products = ({ image, type, title, description }) => {
         >
           {description}
         </p>
-        <DirectLinkButton
+        {/* <DirectLinkButton
           textcolor={spbutton[0].textcolor}
           buttonstyle={spbutton[0].buttonstyle}
-          link={spbutton[0].link}
-        />
+          link={data.slug}
+        /> */}
       </div>
     </div>
   );

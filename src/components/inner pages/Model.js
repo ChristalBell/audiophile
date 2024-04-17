@@ -3,12 +3,12 @@ import data from "../../data.json";
 import DirectProductCard from "../cards/DirectProductCard";
 import CategoryCard from "../cards/CategoryCard";
 import Ad from "../shared/Ad";
+import Counter from "./Counter";
 
 // image, type, title, description, price, features, box, link
 const Model = () => {
   return (
     <div>
-      <p>hello world</p>
       {/* <Route exact path="/headphones">
               <Headphones />
             </Route> */}
@@ -25,6 +25,7 @@ const Model = () => {
         <p>{data[5].description}</p>
         <h5>${data[5].price}</h5>
         Add to Cart Component
+        <Counter />
       </>
 
       <>

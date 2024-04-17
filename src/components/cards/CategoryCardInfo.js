@@ -8,6 +8,7 @@ import {
   Link,
   Button,
 } from "@mui/material";
+import data from "../../data.json";
 
 const CategoryCardInfo = ({ pics, title, link }) => {
   return (

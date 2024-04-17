@@ -1,5 +1,7 @@
 import React from "react";
 import CategoryCardInfo from "./CategoryCardInfo";
+import data from "../../data.json";
+import { AltRoute } from "@mui/icons-material";
 
 const CategoryCard = () => {
   const shopInfo = [
