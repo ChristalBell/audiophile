@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import data from "../../data.json";
 
-const CategoryCardInfo = ({ pics, title, link }) => {
+const CategoryInfo = ({ pics, category, link }) => {
   return (
     <div>
       <Card
@@ -34,7 +34,7 @@ const CategoryCardInfo = ({ pics, title, link }) => {
       >
         <CardMedia
           image={pics}
-          title={title}
+          category={category}
           sx={{
             height: "10rem",
             width: "8rem",
@@ -51,7 +51,7 @@ const CategoryCardInfo = ({ pics, title, link }) => {
               textTransform: "uppercase",
             }}
           >
-            {title}
+            {category}
           </Typography>
         </CardContent>
         <CardActions>
@@ -77,4 +77,4 @@ const CategoryCardInfo = ({ pics, title, link }) => {
   );
 };
 
-export default CategoryCardInfo;
+export default CategoryInfo;

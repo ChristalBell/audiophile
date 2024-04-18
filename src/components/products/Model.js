@@ -1,7 +1,7 @@
 import React from "react";
 import data from "../../data.json";
-import DirectProductCard from "../cards/DirectProductCard";
-import CategoryContainer from "./CategoryContainer";
+import DirectProductCard from "./DirectProductCard";
+import CategoryContainer from "../category/CategoryContainer";
 import Ad from "../shared/Ad";
 import Counter from "./Counter";
 

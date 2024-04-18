@@ -1,11 +1,11 @@
 import React from "react";
-import Products from "./Products";
+import Products from "../products/Products";
 import data from "../../data.json";
 import CategoryContainer from "./CategoryContainer";
 import Ad from "../shared/Ad";
 import { Link } from "react-router-dom";
-import Model from "./Model";
-import DirectLinkButton from "../cards/DirectLinkButton";
+import Model from "../products/Model";
+import DirectLinkButton from "../buttons/DirectLinkButton";
 
 const Earphones = () => {
   return (

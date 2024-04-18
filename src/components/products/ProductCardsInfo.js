@@ -1,6 +1,6 @@
 import { Card, CardContent, CardActions, Typography } from "@mui/material";
 import React from "react";
-import DirectLinkButton from "./DirectLinkButton";
+import DirectLinkButton from "../buttons/DirectLinkButton";
 
 const ProductCardsInfo = ({
   display,

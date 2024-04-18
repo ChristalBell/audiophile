@@ -1,6 +1,6 @@
 import React from "react";
 import "./hero.css";
-import DirectLinkButton from "../cards/DirectLinkButton";
+import DirectLinkButton from "../buttons/DirectLinkButton";
 
 const Hero = () => {
   const homebutton = [

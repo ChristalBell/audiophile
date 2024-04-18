@@ -9,9 +9,9 @@ import {
   Switch,
 } from "react-router-dom/cjs/react-router-dom.min";
 import Footer from "./components/shared/Footer";
-import Headphones from "./components/products/Headphones";
-import Speakers from "./components/products/Speakers";
-import Earphones from "./components/products/Earphones";
+import Headphones from "./components/category/Headphones";
+import Speakers from "./components/category/Speakers";
+import Earphones from "./components/category/Earphones";
 import Cart from "./components/checkout/Cart";
 import Model from "./components/products/Model";
 

@@ -1,43 +1,40 @@
 import React from "react";
-import CategoryCardInfo from "../cards/CategoryCardInfo";
-import data from "../../data.json";
-import { AltRoute } from "@mui/icons-material";
-import GoBackButton from "../shared/GoBackButton";
+import CategoryInfo from "./CategoryInfo";
 
 const CategoryContainer = () => {
   const shopInfo = [
     {
       pics: "./assets/shared/image-headphones.png",
-      title: "headphones",
+      category: "headphones",
       link: "./headphones",
     },
     {
       pics: "./assets/shared/image-speakers.png",
-      title: "speakers",
+      category: "speakers",
       link: "./speakers",
     },
     {
       pics: "./assets/shared/image-earphones.png",
-      title: "earphones",
+      category: "earphones",
       link: "./earphones",
     },
   ];
 
   return (
     <div>
-      <CategoryCardInfo
+      <CategoryInfo
         pics={shopInfo[0].pics}
-        title={shopInfo[0].title}
+        category={shopInfo[0].category}
         link={shopInfo[0].link}
       />
-      <CategoryCardInfo
+      <CategoryInfo
         pics={shopInfo[1].pics}
-        title={shopInfo[1].title}
+        category={shopInfo[1].category}
         link={shopInfo[1].link}
       />
-      <CategoryCardInfo
+      <CategoryInfo
         pics={shopInfo[2].pics}
-        title={shopInfo[2].title}
+        category={shopInfo[2].category}
         link={shopInfo[2].link}
       />
     </div>

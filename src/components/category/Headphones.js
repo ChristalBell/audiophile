@@ -1,7 +1,7 @@
 import React from "react";
-import Products from "./Products";
+import Products from "../products/Products";
 import data from "../../data.json";
-import GoBackButton from "../shared/GoBackButton";
+import GoBackButton from "../buttons/GoBackButton";
 import CategoryContainer from "./CategoryContainer";
 import Ad from "../shared/Ad";
 

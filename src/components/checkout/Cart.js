@@ -1,6 +1,6 @@
 import React from "react";
 import CheckoutForm from "./CheckoutForm";
-import GoBackButton from "../shared/GoBackButton";
+import GoBackButton from "../buttons/GoBackButton";
 import SummaryForm from "./SummaryForm";
 
 const Cart = () => {

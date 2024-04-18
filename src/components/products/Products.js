@@ -1,6 +1,6 @@
 import React from "react";
 import data from "../../data.json";
-import DirectLinkButton from "../cards/DirectLinkButton";
+import DirectLinkButton from "../buttons/DirectLinkButton";
 import { Modal, Typography } from "@mui/material";
 
 const Products = ({ image, type, title, description }) => {

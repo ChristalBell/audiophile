@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "./Hero";
-import CategoryContainer from "../products/CategoryContainer";
-import DirectProductCard from "../cards/DirectProductCard";
+import CategoryContainer from "../category/CategoryContainer";
+import DirectProductCard from "../products/DirectProductCard";
 import Ad from "../shared/Ad";
 
 const Home = () => {
