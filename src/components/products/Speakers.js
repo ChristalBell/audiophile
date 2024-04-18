@@ -1,7 +1,7 @@
 import React from "react";
 import Products from "./Products";
 import data from "../../data.json";
-import CategoryCard from "../cards/CategoryCard";
+import CategoryContainer from "./CategoryContainer";
 import GoBackButton from "../shared/GoBackButton";
 import Ad from "../shared/Ad";
 
@@ -24,7 +24,7 @@ const Speakers = () => {
           description={data[4].description}
         />
       </div>
-      <CategoryCard />
+      <CategoryContainer />
       <Ad />
     </div>
   );

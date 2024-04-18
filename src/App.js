@@ -3,17 +3,17 @@ import "./App.css";
 import { ThemeProvider, createTheme } from "@mui/material";
 import Header from "./components/shared/Header";
 import Home from "./components/home/Home";
-import Earphones from "./components/inner pages/Earphones";
 import {
   BrowserRouter as Router,
   Route,
   Switch,
 } from "react-router-dom/cjs/react-router-dom.min";
 import Footer from "./components/shared/Footer";
-import Headphones from "./components/inner pages/Headphones";
-import Speakers from "./components/inner pages/Speakers";
+import Headphones from "./components/products/Headphones";
+import Speakers from "./components/products/Speakers";
+import Earphones from "./components/products/Earphones";
 import Cart from "./components/checkout/Cart";
-import Model from "./components/inner pages/Model";
+import Model from "./components/products/Model";
 
 function App() {
   const theme = createTheme({

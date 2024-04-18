@@ -2,7 +2,7 @@ import React from "react";
 import Products from "./Products";
 import data from "../../data.json";
 import GoBackButton from "../shared/GoBackButton";
-import CategoryCard from "../cards/CategoryCard";
+import CategoryContainer from "./CategoryContainer";
 import Ad from "../shared/Ad";
 
 const Headphones = () => {
@@ -31,7 +31,7 @@ const Headphones = () => {
           description={data[2].description}
         />
       </div>
-      <CategoryCard />
+      <CategoryContainer />
       <Ad />
     </div>
   );

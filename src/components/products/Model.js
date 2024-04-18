@@ -1,7 +1,7 @@
 import React from "react";
 import data from "../../data.json";
 import DirectProductCard from "../cards/DirectProductCard";
-import CategoryCard from "../cards/CategoryCard";
+import CategoryContainer from "./CategoryContainer";
 import Ad from "../shared/Ad";
 import Counter from "./Counter";
 
@@ -43,7 +43,7 @@ const Model = () => {
       <>
         <h2>You May Also Like</h2>
         <DirectProductCard />
-        <CategoryCard />
+        <CategoryContainer />
         <Ad />
       </>
     </div>

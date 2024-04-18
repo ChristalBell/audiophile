@@ -1,9 +1,10 @@
 import React from "react";
-import CategoryCardInfo from "./CategoryCardInfo";
+import CategoryCardInfo from "../cards/CategoryCardInfo";
 import data from "../../data.json";
 import { AltRoute } from "@mui/icons-material";
+import GoBackButton from "../shared/GoBackButton";
 
-const CategoryCard = () => {
+const CategoryContainer = () => {
   const shopInfo = [
     {
       pics: "./assets/shared/image-headphones.png",
@@ -43,4 +44,4 @@ const CategoryCard = () => {
   );
 };
 
-export default CategoryCard;
+export default CategoryContainer;
