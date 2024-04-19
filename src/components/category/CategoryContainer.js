@@ -1,8 +1,8 @@
 import React from "react";
-import CategoryInfo from "./CategoryInfo";
+import CategoryDesign from "./CategoryDesign";
 
 const CategoryContainer = () => {
-  const shopInfo = [
+  const info = [
     {
       pics: "./assets/shared/image-headphones.png",
       category: "headphones",
@@ -22,20 +22,20 @@ const CategoryContainer = () => {
 
   return (
     <div>
-      <CategoryInfo
-        pics={shopInfo[0].pics}
-        category={shopInfo[0].category}
-        link={shopInfo[0].link}
+      <CategoryDesign
+        pics={info[0].pics}
+        category={info[0].category}
+        link={info[0].link}
       />
-      <CategoryInfo
-        pics={shopInfo[1].pics}
-        category={shopInfo[1].category}
-        link={shopInfo[1].link}
+      <CategoryDesign
+        pics={info[1].pics}
+        category={info[1].category}
+        link={info[1].link}
       />
-      <CategoryInfo
-        pics={shopInfo[2].pics}
-        category={shopInfo[2].category}
-        link={shopInfo[2].link}
+      <CategoryDesign
+        pics={info[2].pics}
+        category={info[2].category}
+        link={info[2].link}
       />
     </div>
   );

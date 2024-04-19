@@ -2,6 +2,7 @@ import { Card, CardContent, CardActions, Typography } from "@mui/material";
 import React from "react";
 import DirectLinkButton from "../buttons/DirectLinkButton";
 
+// grey bg and see product button on home page for category
 const ProductCardsInfo = ({
   display,
   model,

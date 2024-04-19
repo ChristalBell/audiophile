@@ -1,10 +1,10 @@
 import React from "react";
-import Products from "../products/Products";
+import Products from "./CategoryHome";
 import data from "../../data.json";
 import CategoryContainer from "./CategoryContainer";
 import Ad from "../shared/Ad";
 import { Link } from "react-router-dom";
-import Model from "../products/Model";
+import Model from "../products/ProductDetail";
 import DirectLinkButton from "../buttons/DirectLinkButton";
 
 const Earphones = () => {
@@ -22,8 +22,6 @@ const Earphones = () => {
           <DirectLinkButton />
         </Link>
       </div>
-      <CategoryContainer />
-      <Ad />
     </div>
   );
 };

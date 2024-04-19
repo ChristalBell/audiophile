@@ -1,5 +1,5 @@
 import React from "react";
-import Products from "../products/Products";
+import Products from "./CategoryHome";
 import data from "../../data.json";
 import CategoryContainer from "./CategoryContainer";
 import GoBackButton from "../buttons/GoBackButton";
@@ -8,7 +8,6 @@ import Ad from "../shared/Ad";
 const Speakers = () => {
   return (
     <div>
-      <GoBackButton />
       <div>
         <Products
           image={data[3].image[0].mobile}
@@ -24,8 +23,6 @@ const Speakers = () => {
           description={data[4].description}
         />
       </div>
-      <CategoryContainer />
-      <Ad />
     </div>
   );
 };

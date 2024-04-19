@@ -13,7 +13,7 @@ import Headphones from "./components/category/Headphones";
 import Speakers from "./components/category/Speakers";
 import Earphones from "./components/category/Earphones";
 import Cart from "./components/checkout/Cart";
-import Model from "./components/products/Model";
+import Model from "./components/products/ProductDetail";
 
 function App() {
   const theme = createTheme({

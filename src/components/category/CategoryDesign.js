@@ -8,9 +8,8 @@ import {
   Link,
   Button,
 } from "@mui/material";
-import data from "../../data.json";
 
-const CategoryInfo = ({ pics, category, link }) => {
+const CategoryDesign = ({ pics, category, link }) => {
   return (
     <div>
       <Card
@@ -77,4 +76,4 @@ const CategoryInfo = ({ pics, category, link }) => {
   );
 };
 
-export default CategoryInfo;
+export default CategoryDesign;

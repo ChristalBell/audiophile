@@ -1,6 +1,8 @@
 import React from "react";
 import ProductCardsInfo from "./ProductCardsInfo";
 
+// on the home page these are ads for the see direct product
+
 const DirectProductCard = () => {
   const moreCards = [
     {
