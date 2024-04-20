@@ -1,10 +1,11 @@
 import React from "react";
 import CategoryHome from "./CategoryHome";
+import ProductDetail from "../products/ProductDetail";
 
 const Headphones = () => {
   return (
     <div>
-      <CategoryHome />
+      <ProductDetail />
 
       {/* <div>
         <ProductDetail

@@ -2,6 +2,7 @@ import React from "react";
 import data from "../../data.json";
 import DirectLinkButton from "../buttons/DirectLinkButton";
 import { Modal, Typography } from "@mui/material";
+import ProductDetail from "../products/ProductDetail";
 
 const CategoryHome = () => {
   // const spbutton = [
@@ -18,13 +19,13 @@ const CategoryHome = () => {
       </div> */}
       <div className="right">
         <div className="new-product">
-          <Typography variant="h3">New Product</Typography>
+          <Typography variant="h6">New Product</Typography>
         </div>
         <div>
           <Typography variant="h2">{data[0].name}</Typography>
           <p>{data[0].description}</p>
         </div>
-        <DirectLinkButton />
+        <DirectLinkButton link={data[3].slug} />
       </div>
     </div>
 

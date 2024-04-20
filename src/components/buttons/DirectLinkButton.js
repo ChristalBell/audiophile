@@ -5,27 +5,27 @@ import Link from "@mui/material/Link";
 const DirectLinkButton = ({ textcolor, buttonstyle, link }) => {
   return (
     <div>
-      <Button
-        color={textcolor}
-        variant={buttonstyle}
+      <Link
+        href={link}
+        underline="none"
         sx={{
-          borderRadius: "0.1rem",
-          fontWeight: 600,
-          marginTop: "1.25rem",
-          padding: "1rem 1.5rem",
+          color: "text.secondary",
+          fontWeight: "600",
         }}
       >
-        <Link
-          href={link}
-          underline="none"
+        <Button
+          color={textcolor}
+          variant={buttonstyle}
           sx={{
-            color: "text.secondary",
-            fontWeight: "600",
+            borderRadius: "0.1rem",
+            fontWeight: 600,
+            marginTop: "1.25rem",
+            padding: "1rem 1.5rem",
           }}
         >
           See Product
-        </Link>
-      </Button>
+        </Button>
+      </Link>
     </div>
   );
 };

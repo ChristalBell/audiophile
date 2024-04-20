@@ -1,7 +1,7 @@
 import "./header.css";
 import { Dropdown } from "@mui/base/Dropdown";
 import { MenuButton as BaseMenuButton } from "@mui/base/MenuButton";
-import { Divider, Link, MenuItem, Paper } from "@mui/material";
+import { Badge, Divider, Link, MenuItem, Paper } from "@mui/material";
 import { Menu } from "@mui/base/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -101,10 +101,12 @@ const Header = () => {
         </div>
 
         <div className="cart-link">
-          <Link href="/cart" color="inherit">
-            {" "}
-            <img src="./assets/shared/icon-cart.svg" alt="cart" />
-          </Link>
+          <Badge badgeContent={4} color="secondary">
+            <Link href="/cart" color="inherit">
+              {" "}
+              <img src="./assets/shared/icon-cart.svg" alt="cart" />
+            </Link>
+          </Badge>
         </div>
       </div>
 
