@@ -14,6 +14,7 @@ import Speakers from "./components/category/Speakers";
 import Earphones from "./components/category/Earphones";
 import Cart from "./components/checkout/Cart";
 import Model from "./components/products/ProductDetail";
+import ProductDetail from "./components/products/ProductDetail";
 
 function App() {
   const theme = createTheme({
@@ -64,8 +65,8 @@ function App() {
               <Earphones />
             </Route>
 
-            <Route exact path="/earphones/yx1wirelessearphones">
-              <Model />
+            <Route exact path="/xx99-mark-two-headphones">
+              <ProductDetail />
             </Route>
 
             <Route exact path="/cart">

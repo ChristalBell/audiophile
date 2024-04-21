@@ -5,7 +5,7 @@ import ProductDetail from "../products/ProductDetail";
 const Headphones = () => {
   return (
     <div>
-      <ProductDetail />
+      <CategoryHome />
 
       {/* <div>
         <ProductDetail
