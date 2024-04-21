@@ -13,7 +13,6 @@ import Headphones from "./components/category/Headphones";
 import Speakers from "./components/category/Speakers";
 import Earphones from "./components/category/Earphones";
 import Cart from "./components/checkout/Cart";
-import Model from "./components/products/ProductDetail";
 import ProductDetail from "./components/products/ProductDetail";
 
 function App() {
@@ -64,14 +63,24 @@ function App() {
             <Route exact path="/earphones">
               <Earphones />
             </Route>
-
-            <Route exact path="/xx99-mark-two-headphones">
-              <ProductDetail />
-            </Route>
-
             <Route exact path="/cart">
               <Cart />
             </Route>
+            <Route
+              exact
+              path="/headphones/:name"
+              render={(props) => <ProductDetail {...props} />}
+            />
+            <Route
+              exact
+              path="/speakers/:name"
+              render={(props) => <ProductDetail {...props} />}
+            />
+            <Route
+              exact
+              path="/earphones/:name"
+              render={(props) => <ProductDetail {...props} />}
+            />
           </Switch>
           <Footer />
         </ThemeProvider>

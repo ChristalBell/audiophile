@@ -3,22 +3,31 @@ import data from "../../data.json";
 import Counter from "./Counter";
 import AddToCartButton from "../buttons/AddToCartButton";
 
-const ProductDetail = () => {
+const ProductDetail = (props) => {
+  const itemName = props.match.params.name;
+  let item = {};
+
+  data.map((product) => {
+    if (product.slug === itemName) {
+      item = product;
+    }
+    return product;
+  });
   return (
     <div>
       <div className="top" style={{ display: "flex" }}>
         <div className="product-image">
           <img
-            src={data[0].image.mobile}
-            alt={data[0].name}
+            src={item.image.mobile}
+            alt={item.name}
             style={{ borderRadius: ".25rem", height: "20vh", width: "40vw" }}
           />
         </div>
 
         <div className="product-info">
-          <h1>{data[0].name}</h1>
-          <p>{data[0].description}</p>
-          <h5>${data[0].price}</h5>
+          <h1>{item.name}</h1>
+          <p>{item.description}</p>
+          <h5>${item.price}</h5>
 
           <div
             className="product-counter"
@@ -33,7 +42,7 @@ const ProductDetail = () => {
       <div className="bottom" style={{ display: "flex" }}>
         <div className="features">
           <h2>Features</h2>
-          <p>{data[0].features}</p>{" "}
+          <p>{item.features}</p>{" "}
         </div>
 
         <div className="in-box">

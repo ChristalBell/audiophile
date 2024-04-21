@@ -1,34 +1,31 @@
 import React from "react";
 import CategoryHome from "./CategoryHome";
-import ProductDetail from "../products/ProductDetail";
+import data from "../../data.json";
 
 const Headphones = () => {
+  const headphones = [];
+  let newItem = {};
+  const otherItems = [];
+
+  data.forEach((item) => {
+    if (item.category === "headphones") {
+      headphones.push(item);
+    }
+  });
+
+  headphones.map((item) => {
+    if (item.new === true) {
+      newItem = item;
+    } else if (item.new === false) {
+      otherItems.push(item);
+    }
+    return item;
+  });
   return (
     <div>
-      <CategoryHome />
-
-      {/* <div>
-        <ProductDetail
-          image={data[0].image[0].mobile}
-          type={data[0].type}
-          title={data[0].title}
-          description={data[0].description}
-        />
-
-        <ProductDetail
-          image={data[1].image[0].mobile}
-          type={data[1].type}
-          title={data[1].title}
-          description={data[1].description}
-        />
-
-        <ProductDetail
-          image={data[2].image[0].mobile}
-          type={data[2].type}
-          title={data[2].title}
-          description={data[2].description}
-        />
-      </div> */}
+      <CategoryHome item={newItem} />
+      <CategoryHome item={otherItems[1]} />
+      <CategoryHome item={otherItems[0]} />
     </div>
   );
 };
