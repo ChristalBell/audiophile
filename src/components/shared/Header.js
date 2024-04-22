@@ -5,6 +5,7 @@ import { Badge, Divider, Link, MenuItem, Paper } from "@mui/material";
 import { Menu } from "@mui/base/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useSelector } from "react-redux";
+import CartPreview from "../checkout/CartPreview";
 
 const Header = () => {
   const { cartCount } = useSelector((state) => state.cartCount);
@@ -108,6 +109,9 @@ const Header = () => {
               <img src="../assets/shared/icon-cart.svg" alt="cart" />
             </Link>
           </Badge>
+          <div>
+            <CartPreview />
+          </div>
         </div>
       </div>
 

@@ -9,7 +9,14 @@ const Counter = () => {
   const dispatch = useDispatch();
 
   return (
-    <div style={{ display: "flex", alignItems: "center" }}>
+    <div
+      style={{
+        backgroundColor: "hsl(0, 0%, 94%)",
+        borderRadius: ".25rem",
+        display: "flex",
+        alignItems: "center",
+      }}
+    >
       <Button
         onClick={() => {
           dispatch(minus());
