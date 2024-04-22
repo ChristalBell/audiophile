@@ -17,11 +17,7 @@ const ProductDetail = (props) => {
     <div>
       <div className="top" style={{ display: "flex" }}>
         <div className="product-image">
-          <img
-            src={item.image.mobile}
-            alt={item.name}
-            style={{ borderRadius: ".25rem", height: "20vh", width: "40vw" }}
-          />
+          <img src={item.image.mobile} alt={item.name} />
         </div>
 
         <div className="product-info">

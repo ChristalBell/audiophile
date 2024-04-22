@@ -1,14 +1,19 @@
 import React from "react";
-import { Link, Button } from "@mui/material";
+import { Button } from "@mui/material";
+import { useDispatch } from "react-redux";
+import { addCartCount } from "../../store/cartCountSlice";
 
 const AddToCartButton = () => {
+  const dispatch = useDispatch();
   return (
     <div>
-      <Link href="/cart ">
-        <Button variant="contained" color="secondary">
-          Add to Cart
-        </Button>
-      </Link>
+      <Button
+        variant="contained"
+        color="secondary"
+        onClick={() => dispatch(addCartCount())}
+      >
+        Add to Cart
+      </Button>
     </div>
   );
 };

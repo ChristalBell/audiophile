@@ -1,5 +1,4 @@
 import React from "react";
-import data from "../../data.json";
 import DirectLinkButton from "../buttons/DirectLinkButton";
 import { Typography } from "@mui/material";
 
@@ -9,6 +8,9 @@ const CategoryHome = ({ item }) => {
       <div className="right">
         <div className="new-product">
           <Typography variant="h6">New Product</Typography>
+        </div>
+        <div>
+          <img src={item.image.mobile} alt={item.name} />
         </div>
         <div>
           <Typography variant="h2">{item.name}</Typography>

@@ -4,8 +4,10 @@ import { MenuButton as BaseMenuButton } from "@mui/base/MenuButton";
 import { Badge, Divider, Link, MenuItem, Paper } from "@mui/material";
 import { Menu } from "@mui/base/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const { cartCount } = useSelector((state) => state.cartCount);
   return (
     <>
       <div className="header">
@@ -59,7 +61,7 @@ const Header = () => {
 
         <div className="logo">
           <Link href="/home" color="inherit">
-            <img src="./assets/shared/logo.svg" alt="audiophile logo" />
+            <img src="../assets/shared/logo.svg" alt="audiophile logo" />
           </Link>
         </div>
 
@@ -101,10 +103,9 @@ const Header = () => {
         </div>
 
         <div className="cart-link">
-          <Badge badgeContent={4} color="secondary">
+          <Badge badgeContent={cartCount} color="secondary">
             <Link href="/cart" color="inherit">
-              {" "}
-              <img src="./assets/shared/icon-cart.svg" alt="cart" />
+              <img src="../assets/shared/icon-cart.svg" alt="cart" />
             </Link>
           </Badge>
         </div>
