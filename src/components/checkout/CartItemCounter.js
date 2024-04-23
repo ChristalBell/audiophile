@@ -4,9 +4,8 @@ import { lowerCartCount, raiseCartCount } from "../../store/cartCountSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 const CartItemCounter = () => {
-  const { itemCount } = useSelector((state) => state.itemCount);
   const dispatch = useDispatch();
-
+  const { cartCount } = useSelector((state) => state.cartCount);
   return (
     <div
       style={{
@@ -23,7 +22,7 @@ const CartItemCounter = () => {
         -
       </Button>
 
-      <p>item count, add to cart clicked </p>
+      <p>{cartCount} </p>
 
       <Button
         onClick={() => {

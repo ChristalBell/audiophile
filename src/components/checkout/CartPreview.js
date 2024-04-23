@@ -25,7 +25,6 @@ const CartPreview = ({ item }) => {
 
       <div style={{ display: "flex" }}>
         {/* <img src={item.image.mobile} alt={item.name} /> */}
-        <p>{cartCount}</p>
         <CartItemCounter />
       </div>
 
