@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "@mui/material";
 import { clearCartCount } from "../../store/cartCountSlice";
 import { useDispatch } from "react-redux";
+import { clearItem } from "../../store/itemCountSlice";
 
 const ClearCartButton = () => {
   const dispatch = useDispatch();
@@ -13,6 +14,7 @@ const ClearCartButton = () => {
         sx={{ textTransform: "uppercase" }}
         onClick={() => {
           dispatch(clearCartCount());
+          dispatch(clearItem());
         }}
       >
         Remove All

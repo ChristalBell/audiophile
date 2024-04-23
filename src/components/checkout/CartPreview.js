@@ -4,8 +4,10 @@ import "./preview.css";
 import ClearCartButton from "../buttons/ClearCartButton";
 import CheckoutButton from "../buttons/CheckoutButton";
 import CartItemCounter from "./CartItemCounter";
+import { useSelector } from "react-redux";
 
 const CartPreview = ({ item }) => {
+  const { cartCount } = useSelector((state) => state.cartCount);
   return (
     <div
       className="invisible"
@@ -23,7 +25,7 @@ const CartPreview = ({ item }) => {
 
       <div style={{ display: "flex" }}>
         {/* <img src={item.image.mobile} alt={item.name} /> */}
-        <p>item name</p>
+        <p>{cartCount}</p>
         <CartItemCounter />
       </div>
 
