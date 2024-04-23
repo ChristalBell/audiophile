@@ -1,9 +1,9 @@
-import { Typography } from "@mui/material";
 import React from "react";
-import Counter from "../products/Counter";
+
 import "./preview.css";
 import ClearCartButton from "../buttons/ClearCartButton";
 import CheckoutButton from "../buttons/CheckoutButton";
+import CartItemCounter from "./CartItemCounter";
 
 const CartPreview = ({ item }) => {
   return (
@@ -24,14 +24,22 @@ const CartPreview = ({ item }) => {
       <div style={{ display: "flex" }}>
         {/* <img src={item.image.mobile} alt={item.name} /> */}
         <p>item name</p>
-        <Counter />
+        <CartItemCounter />
       </div>
 
-      <div style={{ fontWeight: "bold", textTransform: "uppercase" }}>
+      <div
+        style={{
+          display: "flex",
+          fontWeight: "bold",
+          textTransform: "uppercase",
+        }}
+      >
         <p>total</p>
         <p> $total price.00</p>
       </div>
-      <CheckoutButton />
+      <div>
+        <CheckoutButton />
+      </div>
     </div>
   );
 };

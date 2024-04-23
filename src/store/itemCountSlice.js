@@ -6,14 +6,14 @@ export const itemCountSlice = createSlice({
     itemCount: 0,
   },
   reducers: {
-    minus: (state) => {
+    minusOne: (state) => {
       state.itemCount -= 1;
     },
-    add: (state) => {
+    addOne: (state) => {
       state.itemCount += 1;
     },
   },
 });
 
-export const { minus, add } = itemCountSlice.actions;
+export const { minusOne, addOne } = itemCountSlice.actions;
 export default itemCountSlice.reducer;

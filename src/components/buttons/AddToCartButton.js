@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@mui/material";
 import { useDispatch } from "react-redux";
-import { addCartCount } from "../../store/cartCountSlice";
+import { addCartCount, addToCartCount } from "../../store/cartCountSlice";
 
 const AddToCartButton = () => {
   const dispatch = useDispatch();
@@ -10,7 +10,7 @@ const AddToCartButton = () => {
       <Button
         variant="contained"
         color="secondary"
-        onClick={() => dispatch(addCartCount())}
+        onClick={() => dispatch(addToCartCount())}
       >
         Add to Cart
       </Button>

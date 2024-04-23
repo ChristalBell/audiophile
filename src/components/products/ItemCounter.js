@@ -1,8 +1,7 @@
 import { Button } from "@mui/material";
 import React from "react";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
-import { add, minus } from "../../store/itemCountSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { minusOne, addOne } from "../../store/itemCountSlice";
 
 const Counter = () => {
   const { itemCount } = useSelector((state) => state.itemCount);
@@ -19,7 +18,7 @@ const Counter = () => {
     >
       <Button
         onClick={() => {
-          dispatch(minus());
+          dispatch(minusOne());
         }}
       >
         -
@@ -27,7 +26,7 @@ const Counter = () => {
       <p>{itemCount}</p>
       <Button
         onClick={() => {
-          dispatch(add());
+          dispatch(addOne());
         }}
       >
         +

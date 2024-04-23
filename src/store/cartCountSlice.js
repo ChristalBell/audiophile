@@ -6,19 +6,27 @@ export const cartCountSlice = createSlice({
     cartCount: 0,
   },
   reducers: {
-    clearCart: (state) => {
+    addToCartCount: (state, action) => {
+      state.cartCount += action.payload;
+    },
+
+    clearCartCount: (state) => {
       state.cartCount = 0;
     },
-    addCartCount: (state) => {
+    raiseCartCount: (state) => {
       state.cartCount += 1;
     },
 
-    minusCartCount: (state) => {
+    lowerCartCount: (state) => {
       state.cartCount -= 1;
     },
   },
 });
 
-export const { clearCart, addCartCount, minusCartCount } =
-  cartCountSlice.actions;
+export const {
+  addToCartCount,
+  clearCartCount,
+  raiseCartCount,
+  lowerCartCount,
+} = cartCountSlice.actions;
 export default cartCountSlice.reducer;

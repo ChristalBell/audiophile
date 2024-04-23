@@ -1,18 +1,26 @@
 import React from "react";
 import data from "../../data.json";
-import Counter from "./Counter";
+import ItemCounter from "./ItemCounter";
 import AddToCartButton from "../buttons/AddToCartButton";
 
 const ProductDetail = (props) => {
   const itemName = props.match.params.name;
   let item = {};
+  // const boxItems = [];  this is for the in the box
 
   data.map((product) => {
     if (product.slug === itemName) {
       item = product;
     }
+
     return product;
   });
+
+  // data.forEach((item) => {
+  //   if (item.includes === item.name) {
+  //     boxItems.push(item);
+  //   }
+  // });
   return (
     <div>
       <div className="top" style={{ display: "flex" }}>
@@ -29,7 +37,8 @@ const ProductDetail = (props) => {
             className="product-counter"
             style={{ display: "flex", alignItems: "center" }}
           >
-            <Counter />
+            <ItemCounter />
+
             <AddToCartButton />
           </div>
         </div>
