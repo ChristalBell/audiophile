@@ -1,4 +1,5 @@
 import React from "react";
+import data from "../../data.json";
 
 import "./preview.css";
 import ClearCartButton from "../buttons/ClearCartButton";
@@ -36,7 +37,9 @@ const CartPreview = ({ item }) => {
         }}
       >
         <p>total</p>
-        <p> $total price.00</p>
+        <p>
+          {data[0].price} * {cartCount}
+        </p>
       </div>
       <div>
         <CheckoutButton />
