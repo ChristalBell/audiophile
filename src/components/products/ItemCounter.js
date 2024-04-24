@@ -1,12 +1,13 @@
 import { Button } from "@mui/material";
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { minusOne, addOne } from "../../store/itemCountSlice";
+import { useState } from "react";
+// import { useDispatch, useSelector } from "react-redux";
+// import { minusOne, addOne } from "../../store/itemCountSlice";
 
 const Counter = () => {
-  const { itemCount } = useSelector((state) => state.itemCount);
-  const dispatch = useDispatch();
-
+  // const { itemCount } = useSelector((state) => state.itemCount);
+  // const dispatch = useDispatch();
+  const [count, setCount] = useState(0);
   return (
     <div
       style={{
@@ -16,21 +17,9 @@ const Counter = () => {
         alignItems: "center",
       }}
     >
-      <Button
-        onClick={() => {
-          dispatch(minusOne());
-        }}
-      >
-        -
-      </Button>
-      <p>{itemCount}</p>
-      <Button
-        onClick={() => {
-          dispatch(addOne());
-        }}
-      >
-        +
-      </Button>
+      <Button onClick={() => setCount(count - 1)}>-</Button>
+      <p>{count}</p>
+      <Button onClick={() => setCount(count + 1)}>+</Button>
     </div>
   );
 };
