@@ -7,10 +7,14 @@ import CheckoutButton from "../buttons/CheckoutButton";
 import CartItemCounter from "./CartItemCounter";
 import ItemCounter from "../products/ItemCounter";
 import { useSelector } from "react-redux";
+import { Button } from "@mui/material";
+import { useState } from "react";
 
 const CartPreview = () => {
   const { cartCount } = useSelector((state) => state.cartCount);
   const { itemCount } = useSelector((state) => state.itemCount);
+
+  const [finalCount, setFinalCount] = useState(0);
   // const { cartItems } = useSelector((state) => state.cartItems);
   return (
     <div
@@ -30,8 +34,9 @@ const CartPreview = () => {
       <div style={{ display: "flex" }}>
         {/* {cartItems} */}
         {/* <img src={item.image.mobile} alt={item.name} /> */}
-
-        <ItemCounter />
+        <Button onClick={() => setFinalCount(itemCount - 1)}>-</Button>
+        <p>{finalCount}</p>
+        <Button onClick={() => setFinalCount(itemCount + 1)}> + </Button>
       </div>
 
       <div
