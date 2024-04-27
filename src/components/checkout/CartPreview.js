@@ -10,6 +10,8 @@ import { useSelector } from "react-redux";
 
 const CartPreview = () => {
   const { cartCount } = useSelector((state) => state.cartCount);
+  const { itemCount } = useSelector((state) => state.itemCount);
+  // const { cartItems } = useSelector((state) => state.cartItems);
   return (
     <div
       className="invisible"
@@ -26,7 +28,9 @@ const CartPreview = () => {
       </div>
 
       <div style={{ display: "flex" }}>
+        {/* {cartItems} */}
         {/* <img src={item.image.mobile} alt={item.name} /> */}
+
         <ItemCounter />
       </div>
 
@@ -38,9 +42,7 @@ const CartPreview = () => {
         }}
       >
         <p>total</p>
-        <p>
-          {data[0].price} * {cartCount}
-        </p>
+        <p>{data[0].price * itemCount}</p>
       </div>
       <div>
         <CheckoutButton />
