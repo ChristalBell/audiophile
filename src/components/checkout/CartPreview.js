@@ -5,9 +5,10 @@ import "./preview.css";
 import ClearCartButton from "../buttons/ClearCartButton";
 import CheckoutButton from "../buttons/CheckoutButton";
 import CartItemCounter from "./CartItemCounter";
+import ItemCounter from "../products/ItemCounter";
 import { useSelector } from "react-redux";
 
-const CartPreview = ({ item }) => {
+const CartPreview = () => {
   const { cartCount } = useSelector((state) => state.cartCount);
   return (
     <div
@@ -20,13 +21,13 @@ const CartPreview = ({ item }) => {
       }}
     >
       <div style={{ display: "flex", alignItems: "center" }}>
-        <p style={{ marginRight: "2rem" }}>CART ()</p>
+        <p style={{ marginRight: "2rem" }}>CART ({cartCount})</p>
         <ClearCartButton />
       </div>
 
       <div style={{ display: "flex" }}>
         {/* <img src={item.image.mobile} alt={item.name} /> */}
-        <CartItemCounter />
+        <ItemCounter />
       </div>
 
       <div
