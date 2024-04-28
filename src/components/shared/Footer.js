@@ -11,7 +11,6 @@ const Footer = () => {
         display: "flex",
         flexDirection: "column",
         padding: "2rem",
-        // marginTop: "8rem",
       }}
     >
       <h1>
@@ -36,7 +35,7 @@ const Footer = () => {
           underline="none"
           sx={{ paddingBottom: " 1.5rem" }}
         >
-          home{" "}
+          home
         </Link>
         <Link
           href="/headphones"
@@ -97,7 +96,6 @@ const Footer = () => {
           underline="none"
           style={{ marginRight: "1.5rem" }}
         >
-          {" "}
           <img src="./assets/shared/icon-twitter.svg" alt="Twitter" />{" "}
         </Link>
         <Link
@@ -106,7 +104,6 @@ const Footer = () => {
           underline="none"
           style={{ marginRight: "1.5rem" }}
         >
-          {" "}
           <img src="/assets/shared/icon-instagram.svg" alt="Instagram" />{" "}
         </Link>
       </div>

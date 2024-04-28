@@ -5,10 +5,11 @@ const GoBackButton = () => {
   return (
     <div>
       <Button
-        variant="text"
+        variant="outlined"
         sx={{
           fontSize: ".75rem",
-          marginTop: "4rem",
+          marginTop: "1rem",
+          marginBottom: "1rem",
           marginLeft: "2rem",
           textTransform: "capitalize",
         }}

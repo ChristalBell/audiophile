@@ -1,78 +1,91 @@
 import React from "react";
 import data from "../../data.json";
+import GoBackButton from "../buttons/GoBackButton";
 import ItemCounter from "./ItemCounter";
 import AddToCartButton from "../buttons/AddToCartButton";
+import CategoryGroup from "../category/CategoryGroup";
+import Ad from "../shared/Ad";
+import ProductGallery from "./ProductGallery";
+import ProductRecommendation from "./ProductRecommendation";
 
 const ProductDetail = (props) => {
   const itemName = props.match.params.name;
   let item = {};
-  // const boxItems = [];  this is for the in the box
-
   data.map((product) => {
     if (product.slug === itemName) {
       item = product;
     }
-
     return product;
   });
 
-  // data.forEach((item) => {
-  //   if (item.includes === item.name) {
-  //     boxItems.push(item);
-  //   }
-  // });
   return (
     <div>
-      <div className="top" style={{ display: "flex" }}>
-        <div className="product-image">
-          <img src={item.image.mobile} alt={item.name} />
-        </div>
+      <GoBackButton />
 
-        <div className="product-info">
+      <div
+        className="top"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <div className="product-image">
+          <img
+            src={item.image.mobile}
+            alt={item.name}
+            style={{ borderRadius: ".5rem", height: "60vh", width: "90vw" }}
+          />
+        </div>
+        <div
+          className="product-info"
+          style={{ textAlign: "center", padding: "0 2rem" }}
+        >
           <h1>{item.name}</h1>
           <p>{item.description}</p>
-          <h5>${item.price}</h5>
-
+          <h3>${item.price}</h3>
           <div
             className="product-counter"
-            style={{ display: "flex", alignItems: "center" }}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-around",
+              marginBottom: "2.5rem",
+            }}
           >
             <ItemCounter />
-
             <AddToCartButton />
+          </div>
+          <div className="features">
+            <h2>Features</h2>
+            <p style={{ lineHeight: "1.5rem" }}>{item.features}</p>{" "}
+          </div>
+          <div className="in-box">
+            <h2>In The Box</h2>
+            <ul style={{ listStyle: "none" }}>
+              <li>
+                <span
+                  style={{
+                    color: "hsl(24, 66%, 55%)",
+                    fontWeight: "bold",
+                    marginLeft: "-2rem",
+                  }}
+                >
+                  {item.quantity} x
+                </span>
+                {item.includes.item}
+              </li>
+            </ul>
           </div>
         </div>
       </div>
 
-      <div className="bottom" style={{ display: "flex" }}>
-        <div className="features">
-          <h2>Features</h2>
-          <p>{item.features}</p>{" "}
-        </div>
-
-        <div className="in-box">
-          <h2>In The Box</h2>
-          <ul>
-            {item.includes.map((accessory) => {
-              return (
-                <li key={item.id + Math.random()}>
-                  <span
-                    style={{ color: " hsl(24, 66%, 55%)", fontWeight: "bold" }}
-                  >
-                    {accessory.quantity}x{" "}
-                  </span>
-                  {accessory.item}
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+      <div className="bottom">
+        <ProductGallery />
+        <ProductRecommendation />
+        <CategoryGroup />
+        <Ad />
       </div>
-
-      {/* <>Gallery Component </>
-      <>You May Also Like  (recommended) component</>
-      <> category Card component </>
-      <> ad component </> */}
     </div>
   );
 };
