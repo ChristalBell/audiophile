@@ -26,9 +26,22 @@
 }
 
 .cart-link {
+  position: relative;
+  display: inline-block;
   @media screen and (min-width: 768px) {
     padding-left: 10rem;
   }
+}
+
+.preview-dropdown {
+  display: none;
+  position: absolute;
+
+  z-index: 1;
+}
+
+.cart-link:hover .preview-dropdown {
+  display: block;
 }
 
 .logo {

@@ -1,14 +1,14 @@
 import "./header.css";
 import { Dropdown } from "@mui/base/Dropdown";
 import { MenuButton as BaseMenuButton } from "@mui/base/MenuButton";
-import { Badge, Divider, Link, MenuItem, Paper } from "@mui/material";
+import { Badge, Divider, Link, MenuItem, Paper, Button } from "@mui/material";
 import { Menu } from "@mui/base/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useSelector } from "react-redux";
 import CartPreview from "../checkout/CartPreview";
 
 const Header = () => {
-  const { itemCount } = useSelector((state) => state.itemCount);
+  const { cartCount } = useSelector((state) => state.cartCount);
   return (
     <>
       <div className="header">
@@ -104,12 +104,14 @@ const Header = () => {
         </div>
 
         <div className="cart-link">
-          <Badge badgeContent={itemCount} color="secondary">
-            <Link href="/cart" color="inherit">
-              <img src="../assets/shared/icon-cart.svg" alt="cart" />
-            </Link>
-          </Badge>
-          <div>
+          <Button>
+            <Badge badgeContent={cartCount} color="secondary">
+              <Link href="/cart" color="inherit">
+                <img src="../assets/shared/icon-cart.svg" alt="cart" />
+              </Link>
+            </Badge>
+          </Button>
+          <div className="preview-dropdown">
             <CartPreview />
           </div>
         </div>

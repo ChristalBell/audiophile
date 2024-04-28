@@ -6,16 +6,25 @@ import ClearCartButton from "../buttons/ClearCartButton";
 import CheckoutButton from "../buttons/CheckoutButton";
 import CartItemCounter from "./CartItemCounter";
 import ItemCounter from "../products/ItemCounter";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Button } from "@mui/material";
 import { useState } from "react";
+import { minusOne, addOne } from "../../store/itemCountSlice";
+import {
+  addToCartCount,
+  lowerCartCount,
+  raiseCartCount,
+} from "../../store/cartCountSlice";
+import { changeTotalCount } from "../../store/totalCountSlice";
 
 const CartPreview = () => {
   const { cartCount } = useSelector((state) => state.cartCount);
   const { itemCount } = useSelector((state) => state.itemCount);
+  const dispatch = useDispatch();
 
-  const [finalCount, setFinalCount] = useState(0);
+  // const [finalCount, setFinalCount] = useState(0);
   // const { cartItems } = useSelector((state) => state.cartItems);
+
   return (
     <div
       className="invisible"
@@ -34,9 +43,24 @@ const CartPreview = () => {
       <div style={{ display: "flex" }}>
         {/* {cartItems} */}
         {/* <img src={item.image.mobile} alt={item.name} /> */}
-        <Button onClick={() => setFinalCount(itemCount - 1)}>-</Button>
-        <p>{finalCount}</p>
-        <Button onClick={() => setFinalCount(itemCount + 1)}> + </Button>
+
+        <Button
+          onClick={() => {
+            dispatch(lowerCartCount());
+            dispatch(minusOne());
+          }}
+        >
+          -
+        </Button>
+        <p>{cartCount}</p>
+        <Button
+          onClick={() => {
+            dispatch(raiseCartCount());
+            dispatch(addOne());
+          }}
+        >
+          +
+        </Button>
       </div>
 
       <div
@@ -47,7 +71,7 @@ const CartPreview = () => {
         }}
       >
         <p>total</p>
-        <p>{data[0].price * itemCount}</p>
+        <p>{data[0].price * cartCount}</p>
       </div>
       <div>
         <CheckoutButton />
