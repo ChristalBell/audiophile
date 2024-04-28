@@ -1,6 +1,8 @@
 import React from "react";
-import CategoryHome from "./CategoryHome";
+import CategoryDetail from "./CategoryDetail";
 import data from "../../data.json";
+import CategoryGroup from "./CategoryGroup";
+import Ad from "../shared/Ad";
 
 const Speakers = () => {
   const speakers = [];
@@ -24,8 +26,12 @@ const Speakers = () => {
 
   return (
     <div>
-      <CategoryHome item={newItem} />
-      <CategoryHome item={otherItems[0]} />
+      <div>
+        <CategoryDetail item={newItem} />
+        <CategoryDetail item={otherItems[0]} />
+      </div>
+      <CategoryGroup />
+      <Ad />
     </div>
   );
 };

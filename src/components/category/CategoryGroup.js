@@ -1,7 +1,7 @@
 import React from "react";
 import CategoryDesign from "./CategoryDesign";
 
-const CategoryContainer = () => {
+const CategoryGroup = () => {
   const info = [
     {
       pics: "./assets/shared/image-headphones.png",
@@ -41,4 +41,4 @@ const CategoryContainer = () => {
   );
 };
 
-export default CategoryContainer;
+export default CategoryGroup;

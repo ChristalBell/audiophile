@@ -1,6 +1,9 @@
 import React from "react";
-import CategoryHome from "./CategoryHome";
+import CategoryDetail from "./CategoryDetail";
 import data from "../../data.json";
+import { Typography } from "@mui/material";
+import CategoryGroup from "./CategoryGroup";
+import Ad from "../shared/Ad";
 
 const Headphones = () => {
   const headphones = [];
@@ -23,9 +26,13 @@ const Headphones = () => {
   });
   return (
     <div>
-      <CategoryHome item={newItem} />
-      <CategoryHome item={otherItems[1]} />
-      <CategoryHome item={otherItems[0]} />
+      <div>
+        <CategoryDetail item={newItem} />
+        <CategoryDetail item={otherItems[1]} />
+        <CategoryDetail item={otherItems[0]} />
+      </div>
+      <CategoryGroup />
+      <Ad />
     </div>
   );
 };

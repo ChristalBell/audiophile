@@ -1,6 +1,9 @@
 import React from "react";
-import CategoryHome from "./CategoryHome";
+import CategoryDetail from "./CategoryDetail";
 import data from "../../data.json";
+import CategoryGroup from "./CategoryGroup";
+import Ad from "../shared/Ad";
+
 const Earphones = () => {
   const earphones = [];
   let newItem = {};
@@ -24,7 +27,11 @@ const Earphones = () => {
 
   return (
     <div>
-      <CategoryHome item={newItem} />
+      <div>
+        <CategoryDetail item={newItem} />
+      </div>
+      <CategoryGroup />
+      <Ad />
     </div>
   );
 };

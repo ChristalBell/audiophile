@@ -3,7 +3,6 @@ import { Typography } from "@mui/material";
 import DirectLinkButton from "../buttons/DirectLinkButton";
 
 // on the home page these are ads for the see direct products
-
 const DirectProductCard = () => {
   const speakerButton = [
     {
