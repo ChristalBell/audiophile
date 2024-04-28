@@ -42,6 +42,7 @@
 
 .cart-link:hover .preview-dropdown {
   display: block;
+  translate: -8rem;
 }
 
 .logo {

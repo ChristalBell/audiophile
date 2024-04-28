@@ -1,6 +1,6 @@
 import "./header.css";
 import { Dropdown } from "@mui/base/Dropdown";
-import { MenuButton as BaseMenuButton } from "@mui/base/MenuButton";
+import { MenuButton } from "@mui/base/MenuButton";
 import { Badge, Divider, Link, MenuItem, Paper, Button } from "@mui/material";
 import { Menu } from "@mui/base/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -13,16 +13,16 @@ const Header = () => {
     <>
       <div className="header">
         <div className="dropdown">
-          <Dropdown>
-            <BaseMenuButton>
-              <MenuIcon
-                sx={{
-                  backgroundColor: "primary.main",
-                  border: "",
-                  color: "primary.light",
-                }}
-              />
-            </BaseMenuButton>
+          <Dropdown
+
+          // sx={{
+          //   backgroundColor: "primary.main",
+          //   color: "primary.light",
+          // }}
+          >
+            <MenuButton>
+              <MenuIcon />
+            </MenuButton>
             <Menu>
               <Paper
                 variant="elevation=2"
@@ -118,13 +118,6 @@ const Header = () => {
       </div>
 
       <div>
-        {/* <hr
-          style={{
-            border: "1px solid hsl(0, 0%, 94%)",
-            margin: "0 8%",
-            display: "flex",
-          }}
-        ></hr> */}
         <Divider variant="middle" />
       </div>
     </>

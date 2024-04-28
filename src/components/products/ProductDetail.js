@@ -52,6 +52,20 @@ const ProductDetail = (props) => {
 
         <div className="in-box">
           <h2>In The Box</h2>
+          <ul>
+            {item.includes.map((accessory) => {
+              return (
+                <li key={item.id + Math.random()}>
+                  <span
+                    style={{ color: " hsl(24, 66%, 55%)", fontWeight: "bold" }}
+                  >
+                    {accessory.quantity}x{" "}
+                  </span>
+                  {accessory.item}
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
 

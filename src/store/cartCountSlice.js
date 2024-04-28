@@ -7,8 +7,11 @@ export const cartCountSlice = createSlice({
     cartItems: { name: "", image: "" },
   },
   reducers: {
+    createCart: (state) => {
+      state.cartItems.shift();
+    },
     addToCartCount: (state, action) => {
-      state.cartItems.push(action.payload);
+      state.cartItems += action.payload;
     },
 
     clearCartItems: (state) => {
@@ -29,6 +32,7 @@ export const cartCountSlice = createSlice({
 });
 
 export const {
+  createCart,
   addToCartCount,
   clearCartCount,
   raiseCartCount,

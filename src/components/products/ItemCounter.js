@@ -3,9 +3,12 @@ import React from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { minusOne, addOne } from "../../store/itemCountSlice";
+import { addToCartCount, raiseCartCount } from "../../store/cartCountSlice";
 
 const Counter = () => {
   const { itemCount } = useSelector((state) => state.itemCount);
+  const { cartCount } = useSelector((state) => state.cartCount);
+  // const { cartItems } = useSelector((state) => state.cartItems);
   const dispatch = useDispatch();
   return (
     <div

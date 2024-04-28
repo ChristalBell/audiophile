@@ -14,8 +14,8 @@ const DirectLinkButton = ({ textcolor, buttonstyle, link }) => {
         }}
       >
         <Button
-          color={textcolor}
           variant={buttonstyle}
+          color={textcolor}
           sx={{
             borderRadius: "0.1rem",
             fontWeight: 600,
