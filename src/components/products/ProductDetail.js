@@ -63,18 +63,23 @@ const ProductDetail = (props) => {
           <div className="in-box">
             <h2>In The Box</h2>
             <ul style={{ listStyle: "none" }}>
-              <li>
-                <span
-                  style={{
-                    color: "hsl(24, 66%, 55%)",
-                    fontWeight: "bold",
-                    marginLeft: "-2rem",
-                  }}
-                >
-                  {item.quantity} x
-                </span>
-                {item.includes.item}
-              </li>
+              {item.includes.map((accessory) => {
+                return (
+                  <li style={{ display: "flex" }}>
+                    <span
+                      style={{
+                        color: "hsl(24, 66%, 55%)",
+                        fontWeight: "bold",
+                        padding: "0 1rem",
+                        marginLeft: "1.5rem",
+                      }}
+                    >
+                      {accessory.quantity} x
+                    </span>
+                    {accessory.item}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
