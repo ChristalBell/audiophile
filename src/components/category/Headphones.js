@@ -1,7 +1,6 @@
 import React from "react";
 import CategoryDetail from "./CategoryDetail";
 import data from "../../data.json";
-import { Typography } from "@mui/material";
 import CategoryGroup from "./CategoryGroup";
 import Ad from "../shared/Ad";
 

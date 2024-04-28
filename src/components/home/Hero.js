@@ -7,6 +7,7 @@ const Hero = () => {
     {
       textcolor: "secondary",
       buttonstyle: "contained",
+      link: "/headphones/xx99-mark-two-headphones",
     },
   ];
 
@@ -53,6 +54,7 @@ const Hero = () => {
           <DirectLinkButton
             textcolor={homebutton[0].textcolor}
             buttonstyle={homebutton[0].buttonstyle}
+            link={homebutton[0].link}
           />
         </div>
       </div>

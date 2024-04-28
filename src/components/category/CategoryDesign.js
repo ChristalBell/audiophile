@@ -18,15 +18,12 @@ const CategoryDesign = ({ pics, category, link }) => {
           backgroundColor: "primary.dark",
           borderRadius: ".25rem",
           display: "flex",
-
           flexDirection: "column",
           justifyContent: "center",
-
           marginTop: "8rem",
           marginRight: "2rem",
           marginBottom: "4rem",
           marginLeft: "2rem",
-
           paddingTop: "6rem",
           paddingBottom: "2rem",
         }}
