@@ -86,8 +86,8 @@ const ProductDetail = (props) => {
       </div>
 
       <div className="bottom">
-        <ProductGallery />
-        <ProductRecommendation />
+        {/* <ProductGallery /> */}
+        {/* <ProductRecommendation /> */}
         <CategoryGroup />
         <Ad />
       </div>
