@@ -8,76 +8,153 @@ const CheckoutForm = () => {
         backgroundColor: "white",
         borderRadius: ".5rem",
         fontWeight: "600",
-        paddingBottom: "2rem",
-        padding: "2rem",
-        height: "75%",
-        width: "50%",
+        height: "85vh",
+        width: "80vw",
+        padding: "1rem",
+        marginLeft: "1.25rem",
       }}
     >
-      <Typography variant="h4" sx={{ textTransform: "uppercase" }}>
+      <Typography variant="h6" sx={{ textTransform: "uppercase" }}>
         Checkout
       </Typography>
       <form>
-        <p style={{ color: "hsl(24, 66%, 55%)", textTransform: "uppercase" }}>
-          Billing Details
-        </p>
-        <div
-          style={{
-            paddingBottom: "2rem",
-          }}
-        >
-          <label>Name</label>
-          <input type="text" name="Name" placeholder="Name" required />{" "}
-          <label>Email Address</label>
-          <input
-            type="email"
-            name="Email Address"
-            placeholder="alex.ward@gmail.com"
-            required
-          />
-          <label>Phone Number</label>
-          <input
-            type="text"
-            name="Phone Number"
-            placeholder="(323)459-3248"
-            required
-          />
+        <div className="billing-details">
+          <p
+            style={{
+              color: "hsl(24, 66%, 55%)",
+              textTransform: "uppercase",
+            }}
+          >
+            Billing Details
+          </p>
+          <div
+            className="billing-inputs"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <label for="name">Name</label>
+            <input
+              id="name"
+              type="text"
+              name="Name"
+              placeholder="Name"
+              required
+              style={{ marginBottom: ".5rem" }}
+            />
+            <label for="email">Email Address</label>
+            <input
+              id="email"
+              type="email"
+              name="Email Address"
+              placeholder="alex.ward@gmail.com"
+              required
+              style={{ marginBottom: ".5rem" }}
+            />
+            <label for="phone">Phone Number</label>
+            <input
+              id="phone"
+              type="text"
+              name="Phone Number"
+              placeholder="(323)459-3248"
+              required
+            />
+          </div>
         </div>
 
-        <p style={{ color: "hsl(24, 66%, 55%)", textTransform: "uppercase" }}>
-          Shipping Info
-        </p>
-        <div style={{ paddingBottom: "2rem" }}>
-          <label>Address </label>
-          <input
-            type="text"
-            name="Address"
-            placeholder="123 Main Street Unit C"
-            required
-          />
+        <div className="shipping-info">
+          <p style={{ color: "hsl(24, 66%, 55%)", textTransform: "uppercase" }}>
+            Shipping Info
+          </p>
+          <div
+            className="shipping-inputs"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <label for="address">Address </label>
+            <input
+              id="address"
+              type="text"
+              name="Address"
+              placeholder="123 Main Street Unit C"
+              required
+              style={{ marginBottom: ".5rem" }}
+            />
 
-          <label>Zip Code </label>
-          <input type="text" name="Zip Code" placeholder="39422" required />
+            <label for="zip">Zip Code </label>
+            <input
+              id="zip"
+              type="text"
+              name="Zip Code"
+              placeholder="39422"
+              required
+              style={{ marginBottom: ".5rem" }}
+            />
 
-          <label>City</label>
-          <input type="text" name="City" placeholder="City" required />
+            <label for="city">City</label>
+            <input
+              id="city"
+              type="text"
+              name="City"
+              placeholder="City"
+              required
+              style={{ marginBottom: ".5rem" }}
+            />
 
-          <label>Country </label>
-          <input type="text" name="Country" placeholder="Country" required />
+            <label for="country">Country </label>
+            <input
+              id="country"
+              type="text"
+              name="Country"
+              placeholder="Country"
+              required
+            />
+          </div>
         </div>
-        <p style={{ color: "hsl(24, 66%, 55%)", textTransform: "uppercase" }}>
-          Payment Details
-        </p>
-        <div>
+
+        <div className="payment-details">
+          <p style={{ color: "hsl(24, 66%, 55%)", textTransform: "uppercase" }}>
+            Payment Details
+          </p>
           <p>Payment Method</p>
-          <input type="radio" name="emoney" value="e-Money" />
-          <label for="emoney">e-Money</label>
-          <input type="radio" name="cash" value="Cash on Delivery" />
-          <label for="cash">Cash on Delivery</label>
-          <label for="eMNumber"> e-Money Number </label>
-          <input type="text" name="eMNumber" placeholder="340239455" />
-          <label for="eMPin"> </label> e-Money Pin
-          <input type="text" name="eMPin" placeholder="4823" />
+          <div className="payment-inputs">
+            <div className="radio-options" style={{ display: "flex" }}>
+              <input
+                id="emoney"
+                type="radio"
+                name="emoney"
+                value="e-Money"
+                style={{ marginBottom: ".5rem" }}
+              />
+              <label for="emoney">e-Money</label>
+              <input
+                id="cash"
+                type="radio"
+                name="cash"
+                value="Cash on Delivery"
+                style={{ marginBottom: ".5rem" }}
+              />
+              <label for="cash">Cash on Delivery</label>
+            </div>
+            <div
+              className="e"
+              style={{ display: "flex", flexDirection: "column" }}
+            >
+              <label for="emnumber"> e-Money Number </label>
+              <input
+                id="emnumber"
+                type="text"
+                name="eMNumber"
+                placeholder="340239455"
+                style={{ marginBottom: ".5rem" }}
+              />
+              <label for="empin"> </label> e-Money Pin
+              <input id="empin" type="text" name="eMPin" placeholder="4823" />
+            </div>
+          </div>
         </div>
       </form>
     </div>

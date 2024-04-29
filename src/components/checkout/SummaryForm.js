@@ -7,12 +7,12 @@ const SummaryForm = () => {
       style={{
         backgroundColor: "white",
         borderRadius: ".5rem",
-        fontWeight: "600",
-        height: "20rem",
-        padding: "2rem",
+        // fontWeight: "600",
+        height: "35vh",
+        width: "35vw",
+        padding: ".5rem 2rem",
         textTransform: "uppercase",
-        width: "20rem",
-        marginLeft: "2rem",
+        // marginRight: "2rem",
       }}
     >
       <h3>Summary</h3>

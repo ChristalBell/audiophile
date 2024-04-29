@@ -8,14 +8,13 @@ const Cart = () => {
     <div
       style={{
         backgroundColor: "hsl(0, 0%, 94%)",
-        paddingLeft: "4rem",
         paddingBottom: "4rem",
       }}
     >
       <GoBackButton />
-      <div style={{ display: "flex" }}>
+      <div>
         <CheckoutForm />
-        <SummaryForm />
+        {/* <SummaryForm /> */}
       </div>
     </div>
   );
