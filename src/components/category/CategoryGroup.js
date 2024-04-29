@@ -1,5 +1,6 @@
 import React from "react";
 import CategoryDesign from "./CategoryDesign";
+import "./categoryGroup.css";
 
 const CategoryGroup = () => {
   const info = [
@@ -21,7 +22,7 @@ const CategoryGroup = () => {
   ];
 
   return (
-    <div>
+    <div className="desktop">
       <CategoryDesign
         pics={info[0].pics}
         category={info[0].category}

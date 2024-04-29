@@ -1,6 +1,7 @@
 import React from "react";
 import { Typography } from "@mui/material";
 import DirectLinkButton from "../buttons/DirectLinkButton";
+import "./directProductCard.css";
 
 // on the home page these are ads for the see direct products
 const DirectProductCard = () => {
@@ -34,26 +35,30 @@ const DirectProductCard = () => {
           margin: "4rem 0",
         }}
       >
+        <div></div>
         <img
+          className="product-one-image"
           src="./assets/shared/image-speakers.png"
           alt="zx9-speaker"
           style={{ marginTop: "4rem", marginBottom: "-2rem" }}
         />
-        <Typography
-          variant="h5"
-          sx={{ fontWeight: "bold", textTransform: "uppercase" }}
-        >
-          zx9 speaker
-        </Typography>
-        <p>
-          Upgrade to premium speakers that are phenomenally built to deliver
-          truly remarkable sound.
-        </p>
-        <DirectLinkButton
-          textcolor={speakerButton[0].textcolor}
-          buttonstyle={speakerButton[0].buttonstyle}
-          link={speakerButton[0].link}
-        />
+        <div className="product-one-text">
+          <Typography
+            variant="h5"
+            sx={{ fontWeight: "bold", textTransform: "uppercase" }}
+          >
+            zx9 speaker
+          </Typography>
+          <p>
+            Upgrade to premium speakers that are phenomenally built to deliver
+            truly remarkable sound.
+          </p>
+          <DirectLinkButton
+            textcolor={speakerButton[0].textcolor}
+            buttonstyle={speakerButton[0].buttonstyle}
+            link={speakerButton[0].link}
+          />
+        </div>
       </div>
       <div
         className="product-two"
@@ -75,7 +80,7 @@ const DirectProductCard = () => {
             link={speakerButton[1].link}
           />
         </div>
-        <div style={{ width: "60vw" }}>
+        <div className="product-two-image" style={{ width: "60vw" }}>
           <img
             src="./assets/product-zx7-speaker/mobile/image-gallery-3.jpg"
             alt="zx7-speaker"
@@ -89,11 +94,13 @@ const DirectProductCard = () => {
       </div>
       <div className="product-three">
         <img
+          id="product-three-image"
           src="./assets/home/mobile/image-earphones-yx1.jpg"
           alt="yx1-earphones"
           style={{ borderRadius: ".5rem", width: "84vw", margin: "2rem 0" }}
         />
         <div
+          className="product-three-text"
           style={{
             backgroundColor: "hsl(0,0%,92%)",
             borderRadius: ".5rem",

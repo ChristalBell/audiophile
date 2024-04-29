@@ -9,6 +9,12 @@
   width: 100vw;
   scale: 3;
   translate: -12rem 6rem;
+
+  /* desktop */
+  @media screen and (min-width: 960px) {
+    width: 50vw;
+    scale: 2;
+  }
 }
 
 .hero-info {
@@ -17,4 +23,10 @@
   margin-bottom: 2.5rem;
   padding: 5rem 3.25rem;
   text-align: center;
+
+  /* desktop */
+  @media screen and (min-width: 960px) {
+    width: 50vw;
+    translate: 75% 0;
+  }
 }
