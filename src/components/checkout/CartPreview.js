@@ -32,7 +32,7 @@ const CartPreview = () => {
         boxShadow: "1rem .5rem .75rem hsl(0, 0%, 10%)",
         color: "hsl(0, 0%, 5%)",
         padding: "1rem 2rem ",
-        translate: "-4rem 0",
+        translate: "-3rem 0",
       }}
     >
       <div className="top" style={{ display: "flex" }}>

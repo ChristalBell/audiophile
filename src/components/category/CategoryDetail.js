@@ -1,8 +1,6 @@
 import React from "react";
 import DirectLinkButton from "../buttons/DirectLinkButton";
 import { Typography } from "@mui/material";
-import CategoryGroup from "./CategoryGroup";
-import Ad from "../shared/Ad";
 
 const CategoryDetail = ({ item }) => {
   const styledButton = {
@@ -16,7 +14,7 @@ const CategoryDetail = ({ item }) => {
           <img
             src={item.image.mobile}
             alt={item.name}
-            style={{ borderRadius: ".5rem" }}
+            style={{ borderRadius: ".5rem", height: "40vh", width: "80vw" }}
           />
         </div>
         <Typography
