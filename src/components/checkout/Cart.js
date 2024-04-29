@@ -14,7 +14,7 @@ const Cart = () => {
       <GoBackButton />
       <div>
         <CheckoutForm />
-        {/* <SummaryForm /> */}
+        <SummaryForm />
       </div>
     </div>
   );

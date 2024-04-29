@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "@mui/material/Button";
+import PayButton from "../buttons/PayButton";
 
 const SummaryForm = () => {
   return (
@@ -7,46 +7,60 @@ const SummaryForm = () => {
       style={{
         backgroundColor: "white",
         borderRadius: ".5rem",
-        // fontWeight: "600",
-        height: "35vh",
-        width: "35vw",
-        padding: ".5rem 2rem",
+        fontWeight: "600",
+        height: "50vh",
+        width: "80vw",
+        padding: "1rem",
+        margin: "2rem 1.5rem",
         textTransform: "uppercase",
-        // marginRight: "2rem",
       }}
     >
-      <h3>Summary</h3>
+      <h4 style={{ textTransform: "uppercase" }}>Summary</h4>
+
       <div
-        className="item-display"
+        className="item-details"
         style={{ display: "flex", alignItems: "center" }}
       >
         <img src="#" alt="name" />
         <p>x quantity</p>
       </div>
 
-      <div className="container">
-        <div className="pricing ">
-          <h4>Total</h4>
-          <p style={{ color: "hsl(0, 0%, 5%)" }}>$Total</p>
+      <div className="summary-details">
+        <div
+          className="total "
+          style={{
+            display: "flex ",
+            alignItems: "center",
+          }}
+        >
+          <h4 style={{ color: "hsl(0, 0%, 47%)" }}>Total</h4>
+          <p style={{ marginLeft: "2rem" }}>$Total</p>
         </div>
-        <div div className="shipping-cost">
-          <h4>Shipping</h4>
-          <p style={{ color: "hsl(0, 0%, 5%)" }}>$Shipping</p>
+        <div
+          className="shipping-cost"
+          style={{ display: "flex ", alignItems: "center" }}
+        >
+          <h4 style={{ color: "hsl(0, 0%, 47%)" }}>Shipping</h4>
+          <p style={{ marginLeft: "2rem" }}>$Shipping</p>
         </div>
-        <div className="taxes">
-          <h4>VAT (included)</h4>
-          <p style={{ color: "hsl(0, 0%, 5%)" }}>$VAT</p>
+        <div
+          className="taxes"
+          style={{ display: "flex ", alignItems: "center" }}
+        >
+          <h4 style={{ color: "hsl(0, 0%, 47%)" }}>VAT (included)</h4>
+          <p style={{ marginLeft: "2rem" }}>$VAT</p>
         </div>
-        <div className="total">
-          <h4>Grand Total</h4>
-          <p style={{ color: "hsl(24, 66%, 55%)" }}>$GrandTotal</p>
+        <div
+          className="grand-total"
+          style={{ display: "flex ", alignItems: "center" }}
+        >
+          <h4 style={{ color: "hsl(0, 0%, 47%)" }}>Grand Total</h4>
+          <p style={{ color: "hsl(24, 66%, 55%)", marginLeft: "2rem" }}>
+            $GrandTotal
+          </p>
         </div>
       </div>
-
-      <Button variant="contained" color="secondary">
-        {" "}
-        Continue & Pay{" "}
-      </Button>
+      <PayButton />
     </div>
   );
 };
