@@ -1,32 +1,17 @@
 import React from "react";
 import { Button } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  raiseCartCount,
-  createCart,
-  addToCartCount,
-} from "../../store/cartCountSlice";
+import { useDispatch } from "react-redux";
+import { raiseItemCount } from "../../store/itemCountSlice";
 
-const AddToCartButton = () => {
+const AddToCartButton = ({ count, setCount }) => {
   const dispatch = useDispatch();
-  // const { cartCount } = useSelector((state) => state.cartCount);
-  // const { cartItems } = useSelector((state) => state.cartItems);
 
   return (
     <div>
       <Button
         variant="contained"
         color="secondary"
-        // onClick={() => {
-        //   if (cartItems === undefined) {
-        //     dispatch(createCart(cartItems, cartCount));
-        //   } else if (cartItems[0].cartItems.name === "") {
-        //     dispatch(createCart(cartCount, cartItems));
-        //   }
-        //   dispatch(addToCartCount(cartCount, cartItems));
-
-        //   dispatch(raiseCartCount());
-        // }}
+        onClick={() => dispatch(raiseItemCount(count))}
       >
         Add to Cart
       </Button>

@@ -15,8 +15,12 @@ export const itemCountSlice = createSlice({
     addOne: (state) => {
       state.itemCount += 1;
     },
+    raiseItemCount: (state, action) => {
+      state.itemCount += action.payload;
+    },
   },
 });
 
-export const { minusOne, addOne, clearItem } = itemCountSlice.actions;
+export const { minusOne, addOne, clearItem, raiseItemCount } =
+  itemCountSlice.actions;
 export default itemCountSlice.reducer;

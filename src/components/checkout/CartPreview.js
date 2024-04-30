@@ -2,26 +2,14 @@ import React from "react";
 import data from "../../data.json";
 import ClearCartButton from "../buttons/ClearCartButton";
 import CheckoutButton from "../buttons/CheckoutButton";
-import CartItemCounter from "./CartItemCounter";
-import ItemCounter from "../products/ItemCounter";
 import { useDispatch, useSelector } from "react-redux";
 import { Button } from "@mui/material";
-import { useState } from "react";
 import { minusOne, addOne } from "../../store/itemCountSlice";
-import {
-  addToCartCount,
-  lowerCartCount,
-  raiseCartCount,
-} from "../../store/cartCountSlice";
-import { changeTotalCount } from "../../store/totalCountSlice";
 
 const CartPreview = () => {
-  const { cartCount } = useSelector((state) => state.cartCount);
+  // const { cartCount } = useSelector((state) => state.cartCount);
   const { itemCount } = useSelector((state) => state.itemCount);
   const dispatch = useDispatch();
-
-  // const [finalCount, setFinalCount] = useState(0);
-  // const { cartItems } = useSelector((state) => state.cartItems);
 
   return (
     <div
@@ -36,31 +24,15 @@ const CartPreview = () => {
       }}
     >
       <div className="top" style={{ display: "flex" }}>
-        <p style={{ marginRight: "2rem" }}>CART ({cartCount})</p>
+        <p style={{ marginRight: "2rem" }}>CART (Total Final Count)</p>
         <ClearCartButton />
       </div>
 
       <div className="item-display">
-        {/* {cartItems} */}
-        {/* <img src={item.image.mobile} alt={item.name} /> */}
-        <div className="button" style={{ display: "flex" }}>
-          <Button
-            onClick={() => {
-              dispatch(lowerCartCount());
-              dispatch(minusOne());
-            }}
-          >
-            -
-          </Button>
-          <p>{cartCount}</p>
-          <Button
-            onClick={() => {
-              dispatch(raiseCartCount());
-              dispatch(addOne());
-            }}
-          >
-            +
-          </Button>
+        <div className="counter-button" style={{ display: "flex" }}>
+          <Button onClick={() => dispatch(minusOne())}>-</Button>
+          <p>{itemCount}</p>
+          <Button onClick={() => dispatch(addOne())}>+</Button>
         </div>
       </div>
 
@@ -77,8 +49,8 @@ const CartPreview = () => {
           className="price"
           style={{ display: "flex", justifyContent: "space-between" }}
         >
-          <p>total</p>
-          <p>{data[0].price * cartCount}</p>
+          <p> count from Counter {itemCount}</p>
+          {/* <p>{data[0].price * some count}</p> */}
         </div>
         <div style={{ alignSelf: "center" }}>
           <CheckoutButton />

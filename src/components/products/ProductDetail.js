@@ -6,7 +6,7 @@ import CategoryGroup from "../category/CategoryGroup";
 import Ad from "../shared/Ad";
 import ProductGallery from "./ProductGallery";
 import ProductRecommendation from "./ProductRecommendation";
-import Counter from "./Counter";
+import Counter from "../shared/Counter";
 import { useState } from "react";
 import { Button } from "@mui/material";
 
@@ -58,7 +58,7 @@ const ProductDetail = (props) => {
           >
             <Counter count={count} setCount={setCount} />
 
-            <AddToCartButton />
+            <AddToCartButton count={count} />
           </div>
           <div className="features">
             <h2>Features</h2>
