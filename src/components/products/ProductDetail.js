@@ -1,12 +1,14 @@
 import React from "react";
 import data from "../../data.json";
 import GoBackButton from "../buttons/GoBackButton";
-import ItemCounter from "./ItemCounter";
 import AddToCartButton from "../buttons/AddToCartButton";
 import CategoryGroup from "../category/CategoryGroup";
 import Ad from "../shared/Ad";
 import ProductGallery from "./ProductGallery";
 import ProductRecommendation from "./ProductRecommendation";
+import Counter from "./Counter";
+import { useState } from "react";
+import { Button } from "@mui/material";
 
 const ProductDetail = (props) => {
   const itemName = props.match.params.name;
@@ -17,7 +19,7 @@ const ProductDetail = (props) => {
     }
     return product;
   });
-
+  const [count, setCount] = useState(0);
   return (
     <div>
       <GoBackButton />
@@ -44,6 +46,7 @@ const ProductDetail = (props) => {
           <h1>{item.name}</h1>
           <p>{item.description}</p>
           <h3>${item.price}</h3>
+
           <div
             className="product-counter"
             style={{
@@ -53,7 +56,8 @@ const ProductDetail = (props) => {
               marginBottom: "2.5rem",
             }}
           >
-            <ItemCounter />
+            <Counter count={count} setCount={setCount} />
+
             <AddToCartButton />
           </div>
           <div className="features">
