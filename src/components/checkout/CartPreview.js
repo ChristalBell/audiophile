@@ -9,6 +9,7 @@ import { minusOne, addOne } from "../../store/itemCountSlice";
 const CartPreview = () => {
   // const { cartCount } = useSelector((state) => state.cartCount);
   const { itemCount } = useSelector((state) => state.itemCount);
+  const { cartItems } = useSelector((state) => state.cartItems);
   const dispatch = useDispatch();
 
   return (
@@ -29,6 +30,7 @@ const CartPreview = () => {
       </div>
 
       <div className="item-display">
+        <p>{cartItems}</p>
         <div className="counter-button" style={{ display: "flex" }}>
           <Button onClick={() => dispatch(minusOne())}>-</Button>
           <p>{itemCount}</p>

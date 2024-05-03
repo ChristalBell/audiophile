@@ -6,9 +6,20 @@ export const cartItemSlice = createSlice({
     cartItems: { item: { name: "", image: "" } },
   },
   reducers: {
-    clearItems: (state) =>
-      (state.cartItems = { item: { name: "", image: "" } }),
+    clearCartItems: (state) => {
+      state.cartItems = { item: { name: "", image: "" } };
+    },
+    addCartItems: (state, action) => {
+      state.cartItems.push(action.payload);
+    },
+    removeCartItems: (state, action) => {
+      state.cartItems.splice(action.payload, 1);
+    },
+    startCartItems: (state) => {
+      state.cartItems.shift();
+    },
   },
 });
-export const { clearItems, addItems, removeItems } = cartItemSlice.actions;
+export const { clearCartItems, addCartItems, removeItems, startCartItems } =
+  cartItemSlice.actions;
 export default cartItemSlice.reducer;
