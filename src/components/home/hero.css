@@ -7,8 +7,8 @@
 .image-box {
   background-size: cover;
   width: 100vw;
-  scale: 3;
-  translate: -12rem 6rem;
+  scale: 2;
+  translate: -16rem 6rem;
 
   /* desktop */
   @media screen and (min-width: 960px) {

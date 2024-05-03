@@ -32,8 +32,8 @@ const CategoryDesign = ({ pics, category, link }) => {
           image={pics}
           category={category}
           sx={{
-            height: "40vh",
-            width: "40vw",
+            height: "25vh",
+            width: "25vw",
             position: "absolute",
             translate: "0 -9rem",
           }}

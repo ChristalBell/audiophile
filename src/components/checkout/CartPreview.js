@@ -25,13 +25,28 @@ const CartPreview = () => {
       }}
     >
       <div className="top" style={{ display: "flex" }}>
-        <p style={{ marginRight: "2rem" }}>CART (Total Final Count)</p>
+        <p style={{ marginRight: "2rem" }}>
+          Final Cart Count
+          <span style={{ color: "hsl(24, 66%, 55%)" }}>(some number)</span>
+        </p>
         <ClearCartButton />
       </div>
 
-      <div className="item-display">
-        <p>{cartItems}</p>
-        <div className="counter-button" style={{ display: "flex" }}>
+      <div
+        className="item-display"
+        style={{ display: "flex", alignItems: "center" }}
+      >
+        <img src="" alt=" item image " />
+        <div>
+          <p>item name {cartItems.name} </p>
+          <p style={{ color: " hsl(0,0%,92%)", fontWeight: "bold" }}>
+            item price{cartItems.price}
+          </p>
+        </div>
+        <div
+          className="counter-button"
+          style={{ display: "flex", backgroundColor: "hsl(0, 0%, 98%)" }}
+        >
           <Button onClick={() => dispatch(minusOne())}>-</Button>
           <p>{itemCount}</p>
           <Button onClick={() => dispatch(addOne())}>+</Button>
@@ -49,10 +64,14 @@ const CartPreview = () => {
       >
         <div
           className="price"
-          style={{ display: "flex", justifyContent: "space-between" }}
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            color: "hsl(24, 66%, 55%)",
+          }}
         >
-          <p> count from Counter {itemCount}</p>
-          {/* <p>{data[0].price * some count}</p> */}
+          <p style={{ textTransform: "uppercase" }}>Total</p>
+          <p> total count </p>
         </div>
         <div style={{ alignSelf: "center" }}>
           <CheckoutButton />

@@ -58,7 +58,7 @@ const ProductDetail = (props) => {
           >
             <Counter count={count} setCount={setCount} />
 
-            <AddToCartButton count={count} />
+            <AddToCartButton count={count} item={item} />
           </div>
           <div className="features">
             <h2>Features</h2>

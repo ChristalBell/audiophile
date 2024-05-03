@@ -49,7 +49,7 @@ const DirectProductCard = () => {
           >
             zx9 speaker
           </Typography>
-          <p>
+          <p style={{ display: "flex", padding: "2rem" }}>
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>
@@ -80,14 +80,15 @@ const DirectProductCard = () => {
             link={speakerButton[1].link}
           />
         </div>
-        <div className="product-two-image" style={{ width: "60vw" }}>
+        <div className="product-two-image">
           <img
             src="./assets/product-zx7-speaker/mobile/image-gallery-3.jpg"
             alt="zx7-speaker"
             style={{
-              height: "40vh",
-              width: "40vw",
+              height: "25vh",
+              width: "25vw",
               marginTop: "4rem",
+              translate: "-4rem 4rem",
             }}
           />
         </div>
@@ -97,15 +98,16 @@ const DirectProductCard = () => {
           id="product-three-image"
           src="./assets/home/mobile/image-earphones-yx1.jpg"
           alt="yx1-earphones"
-          style={{ borderRadius: ".5rem", width: "84vw", margin: "2rem 0" }}
+          style={{ borderRadius: ".5rem", width: "30vw", margin: "2rem 0" }}
         />
         <div
           className="product-three-text"
           style={{
             backgroundColor: "hsl(0,0%,92%)",
             borderRadius: ".5rem",
-            margin: "2rem 0",
-            padding: "4rem 0",
+            margin: "2rem ",
+            padding: "4rem",
+            width: "10vw",
           }}
         >
           <Typography

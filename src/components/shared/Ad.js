@@ -13,7 +13,6 @@ const Ad = () => {
         style={{
           borderRadius: ".25rem",
           height: "20rem",
-          marginTop: "6rem",
           width: "22rem",
         }}
       />

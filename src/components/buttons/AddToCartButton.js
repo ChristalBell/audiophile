@@ -15,7 +15,7 @@ const AddToCartButton = ({ count, setCount, item }) => {
         color="secondary"
         onClick={() => {
           if (cartItems === undefined) {
-            dispatch(startCartItems(item));
+            dispatch(startCartItems(""));
           } else if (cartItems[0] === "") {
             dispatch(startCartItems(item));
           }

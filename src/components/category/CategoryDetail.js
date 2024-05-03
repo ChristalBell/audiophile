@@ -14,7 +14,7 @@ const CategoryDetail = ({ item }) => {
           <img
             src={item.image.mobile}
             alt={item.name}
-            style={{ borderRadius: ".5rem", height: "40vh", width: "80vw" }}
+            style={{ borderRadius: ".5rem", height: "40vh", width: "60vw" }}
           />
         </div>
         <Typography
