@@ -7,17 +7,16 @@ import { startCartItems, addCartItems } from "../../store/cartItemSlice";
 const AddToCartButton = ({ count, setCount, item }) => {
   const dispatch = useDispatch();
   const { cartItems } = useSelector((state) => state.cartItems);
-
+  console.log(cartItems);
+  console.log(item.image.mobile);
   return (
     <div>
       <Button
         variant="contained"
         color="secondary"
         onClick={() => {
-          if (cartItems === undefined) {
-            dispatch(startCartItems(""));
-          } else if (cartItems[0] === "") {
-            dispatch(startCartItems(item));
+          if (cartItems[0].name === "") {
+            dispatch(startCartItems());
           }
           dispatch(raiseItemCount(count));
           dispatch(addCartItems(item));

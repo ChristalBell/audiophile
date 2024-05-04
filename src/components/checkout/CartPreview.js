@@ -22,6 +22,7 @@ const CartPreview = () => {
         color: "hsl(0, 0%, 5%)",
         padding: "1rem 2rem ",
         translate: "-3rem 0",
+        width: "25vw",
       }}
     >
       <div className="top" style={{ display: "flex" }}>
@@ -36,21 +37,35 @@ const CartPreview = () => {
         className="item-display"
         style={{ display: "flex", alignItems: "center" }}
       >
-        <img src="" alt=" item image " />
-        <div>
-          <p>item name {cartItems.name} </p>
-          <p style={{ color: " hsl(0,0%,92%)", fontWeight: "bold" }}>
-            item price{cartItems.price}
-          </p>
-        </div>
-        <div
-          className="counter-button"
-          style={{ display: "flex", backgroundColor: "hsl(0, 0%, 98%)" }}
-        >
-          <Button onClick={() => dispatch(minusOne())}>-</Button>
-          <p>{itemCount}</p>
-          <Button onClick={() => dispatch(addOne())}>+</Button>
-        </div>
+        {cartItems.map((item) => {
+          return (
+            <>
+              <img
+                src={item.image}
+                alt={item.name}
+                style={{ height: "15vh", width: "15vw" }}
+              />
+              <div>
+                <p>{item.name} </p>
+                <p style={{ color: " hsl(0,0%,92%)", fontWeight: "bold" }}>
+                  ${item.price}
+                </p>
+              </div>
+
+              <div
+                className="counter-button"
+                style={{
+                  display: "flex",
+                  backgroundColor: "hsl(0, 0%, 98%)",
+                }}
+              >
+                <Button onClick={() => dispatch(minusOne())}>-</Button>
+                <p>{itemCount}</p>
+                <Button onClick={() => dispatch(addOne())}>+</Button>
+              </div>
+            </>
+          );
+        })}
       </div>
 
       <div
