@@ -8,8 +8,10 @@ import { minusOne, addOne } from "../../store/itemCountSlice";
 
 const CartPreview = () => {
   // const { cartCount } = useSelector((state) => state.cartCount);
-  const { itemCount } = useSelector((state) => state.itemCount);
+  // const { cartItemCount } = useSelector((state) => state.cartItemCount);
   const { cartItems } = useSelector((state) => state.cartItems);
+  const { totalPrice } = useSelector((state) => state.totalPrice);
+  const { itemCount } = useSelector((state) => state.itemCount);
   const dispatch = useDispatch();
 
   return (
@@ -86,9 +88,10 @@ const CartPreview = () => {
             color: "hsl(24, 66%, 55%)",
           }}
         >
-          <p style={{ textTransform: "uppercase" }}>Total</p>
+          <p style={{ textTransform: "uppercase" }}>Total $ {totalPrice}</p>
           <p> total count </p>
         </div>
+
         <div style={{ alignSelf: "center" }}>
           <CheckoutButton />
         </div>

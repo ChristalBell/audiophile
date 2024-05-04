@@ -5,8 +5,8 @@ export const cartItemSlice = createSlice({
   initialState: {
     cartItems: [
       {
+        cartItemCount: 0,
         item: {
-          cartItemCount: 0,
           price: 0,
           name: "",
           image: {
@@ -32,8 +32,20 @@ export const cartItemSlice = createSlice({
     startCartItems: (state) => {
       state.cartItems.shift();
     },
+    raiseCountCartItems: (state, action) => {
+      state.cartItemCount += action.payload;
+    },
+    lowerCountCartItems: (state, action) => {
+      state.cartItemCount -= action.payload;
+    },
   },
 });
-export const { clearCartItems, addCartItems, removeItems, startCartItems } =
-  cartItemSlice.actions;
+export const {
+  clearCartItems,
+  addCartItems,
+  removeItems,
+  startCartItems,
+  raiseCountCartItems,
+  lowerCountCartItems,
+} = cartItemSlice.actions;
 export default cartItemSlice.reducer;
