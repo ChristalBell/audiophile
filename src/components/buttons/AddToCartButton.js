@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { raiseItemCount } from "../../store/itemCountSlice";
 import { startCartItems, addCartItems } from "../../store/cartItemSlice";
 
-const AddToCartButton = ({ count, setCount, item }) => {
+const AddToCartButton = ({ count, setCount, item, cartItemCount }) => {
   const dispatch = useDispatch();
   const { cartItems } = useSelector((state) => state.cartItems);
   console.log(cartItems);
@@ -15,11 +15,11 @@ const AddToCartButton = ({ count, setCount, item }) => {
         variant="contained"
         color="secondary"
         onClick={() => {
-          if (cartItems[0].name === "") {
-            dispatch(startCartItems());
-          }
+          // if (cartItems[0].name === "") {
+          //   dispatch(startCartItems());
+          // }
           dispatch(raiseItemCount(count));
-          dispatch(addCartItems(item));
+          dispatch(addCartItems(item, cartItemCount));
         }}
       >
         Add to Cart

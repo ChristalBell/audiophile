@@ -38,6 +38,7 @@ const CartPreview = () => {
         style={{ display: "flex", alignItems: "center" }}
       >
         {cartItems.map((item) => {
+          console.log(item.image.mobile);
           return (
             <>
               <img
