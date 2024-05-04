@@ -4,14 +4,23 @@ export const cartItemSlice = createSlice({
   name: "cartItems",
   initialState: {
     cartItems: [
-      { item: { name: "", image: { mobile: "" }, price: 0 }, cartItemCount: 0 },
+      {
+        item: {
+          cartItemCount: 0,
+          price: 0,
+          name: "",
+          image: {
+            mobile: "",
+          },
+        },
+      },
     ],
   },
   reducers: {
     clearCartItems: (state) => {
       state.cartItems = {
         item: { name: "", image: { mobile: "" }, price: 0 },
-        cartItemcount: 0,
+        cartItemCount: 0,
       };
     },
     addCartItems: (state, action) => {

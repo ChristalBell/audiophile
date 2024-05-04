@@ -38,14 +38,14 @@ const CartPreview = () => {
         style={{ display: "flex", alignItems: "center" }}
       >
         {cartItems.map((item) => {
-          console.log(item.image.mobile);
+          console.log(item);
           return (
             <>
-              <img
-                src={item.image}
+              {/* <img
+                src={item.image.mobile}
                 alt={item.name}
                 style={{ height: "15vh", width: "15vw" }}
-              />
+              /> */}
               <div>
                 <p>{item.name} </p>
                 <p style={{ color: " hsl(0,0%,92%)", fontWeight: "bold" }}>
