@@ -36,62 +36,78 @@ const CartPreview = () => {
         <ClearCartButton />
       </div>
 
-      <div
-        className="item-display"
-        style={{ display: "flex", alignItems: "center" }}
-      >
-        {cartItems.map((item) => {
-          console.log(item);
-          return (
-            <div
-              className="mini-container"
-              style={{
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              <img
-                src=""
-                alt={item.name}
-                style={{ height: "15vh", width: "15vw" }}
-              />
-              <div style={{ marginRight: "2rem" }}>
-                <p>{item.name} </p>
-                <p style={{ color: " hsl(0,0%,92%)", fontWeight: "bold" }}>
-                  ${item.price}
-                </p>
-              </div>
-
+      <div className="working-div">
+        {cartItems.length > 1 ? (
+          cartItems.map((cartItem) => {
+            return (
               <div
-                className="counter-button"
-                style={{
-                  display: "flex",
-                  backgroundColor: "hsl(0, 0%, 98%)",
-                }}
+                className="item-display"
+                style={{ display: "flex", alignItems: "center" }}
               >
-                <Button
-                  onClick={() => {
-                    dispatch(minusOne());
-                    dispatch(lowerTotalPrice(item.price));
-                  }}
-                >
-                  -
-                </Button>
-                <p>{itemCount}</p>
-                <Button
-                  onClick={() => {
-                    dispatch(addOne());
-                    dispatch(raiseTotalPrice(item.price));
-                  }}
-                >
-                  +
-                </Button>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+                {cartItems.map((item) => {
+                  console.log(item);
+                  return (
+                    <div
+                      className="mini-container"
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                      }}
+                    >
+                      <img
+                        src=""
+                        alt={item.name}
+                        style={{ height: "15vh", width: "15vw" }}
+                      />
+                      <div style={{ marginRight: "2rem" }}>
+                        <p>{item.name} </p>
+                        <p
+                          style={{
+                            color: " hsl(0,0%,92%)",
+                            fontWeight: "bold",
+                          }}
+                        >
+                          ${item.price}
+                        </p>
+                      </div>
 
+                      <div
+                        className="counter-button"
+                        style={{
+                          display: "flex",
+                          backgroundColor: "hsl(0, 0%, 98%)",
+                        }}
+                      >
+                        <Button
+                          onClick={() => {
+                            dispatch(minusOne());
+                            dispatch(lowerTotalPrice(item.price));
+                          }}
+                        >
+                          -
+                        </Button>
+                        <p>{itemCount}</p>
+                        <Button
+                          onClick={() => {
+                            dispatch(addOne());
+                            dispatch(raiseTotalPrice(item.price));
+                          }}
+                        >
+                          +
+                        </Button>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })
+        ) : (
+          <div>
+            <p>hello world</p>
+          </div>
+        )}
+      </div>
       <div
         className="total"
         style={{
