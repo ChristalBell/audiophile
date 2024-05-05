@@ -1,7 +1,11 @@
 import React from "react";
 import PayButton from "../buttons/PayButton";
+import { useSelector } from "react-redux";
 
 const SummaryForm = () => {
+  const { totalPrice } = useSelector((state) => state.totalPrice);
+  const shipping = 19.99;
+  const VAT = 0.0095;
   return (
     <div
       style={{
@@ -34,29 +38,38 @@ const SummaryForm = () => {
           }}
         >
           <h4 style={{ color: "hsl(0, 0%, 47%)" }}>Total</h4>
-          <p style={{ marginLeft: "2rem" }}>$Total</p>
+          <p style={{ marginLeft: "2rem" }}>$Total {totalPrice}</p>
         </div>
         <div
           className="shipping-cost"
           style={{ display: "flex ", alignItems: "center" }}
         >
           <h4 style={{ color: "hsl(0, 0%, 47%)" }}>Shipping</h4>
-          <p style={{ marginLeft: "2rem" }}>$Shipping</p>
+          <p style={{ marginLeft: "2rem" }}>$ {shipping}</p>
         </div>
         <div
           className="taxes"
           style={{ display: "flex ", alignItems: "center" }}
         >
           <h4 style={{ color: "hsl(0, 0%, 47%)" }}>VAT (included)</h4>
-          <p style={{ marginLeft: "2rem" }}>$VAT</p>
+          <p style={{ marginLeft: "2rem" }}>${totalPrice * VAT}</p>
         </div>
         <div
           className="grand-total"
-          style={{ display: "flex ", alignItems: "center" }}
+          style={{
+            display: "flex ",
+            alignItems: "center",
+            fontWeight: "bolder",
+          }}
         >
           <h4 style={{ color: "hsl(0, 0%, 47%)" }}>Grand Total</h4>
-          <p style={{ color: "hsl(24, 66%, 55%)", marginLeft: "2rem" }}>
-            $GrandTotal
+          <p
+            style={{
+              color: "hsl(24, 66%, 55%)",
+              marginLeft: "2rem",
+            }}
+          >
+            $ {totalPrice * VAT + shipping}GrandTotal
           </p>
         </div>
       </div>

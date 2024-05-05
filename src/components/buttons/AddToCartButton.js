@@ -22,7 +22,7 @@ const AddToCartButton = ({ count, setCount, item }) => {
         onClick={() => {
           dispatch(startCartItems());
           dispatch(addCartItems(item));
-          dispatch(raiseTotalPrice(item.price * count));
+          dispatch(raiseTotalPrice(count * item.price));
           dispatch(raiseItemCount(count));
         }}
       >
