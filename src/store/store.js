@@ -1,11 +1,29 @@
 import { configureStore } from "@reduxjs/toolkit";
-import itemCountReducer from "./itemCountSlice";
-import cartItemReducer from "./cartItemSlice";
-import totalPriceReducer from "./totalPriceSlice";
+import storage from "redux-persist/lib/storage";
+import { persistReducer, persistStore } from "redux-persist";
+
+import itemCountSlice from "./itemCountSlice";
+import cartItemSlice from "./cartItemSlice";
+import totalPriceSlice from "./totalPriceSlice";
+
+const persistConfig = {
+  key: "root",
+  storage,
+};
+
+const persisteditemCountReducer = persistReducer(persistConfig, itemCountSlice);
+const persistedcartItemReducer = persistReducer(persistConfig, cartItemSlice);
+const persistedtotalPriceReducer = persistReducer(
+  persistConfig,
+  totalPriceSlice
+);
+
 export const store = configureStore({
   reducer: {
-    itemCount: itemCountReducer,
-    cartItems: cartItemReducer,
-    totalPrice: totalPriceReducer,
+    itemCount: persisteditemCountReducer,
+    cartItems: persistedcartItemReducer,
+    totalPrice: persistedtotalPriceReducer,
   },
 });
+
+export const persistedStore = persistStore(store);
