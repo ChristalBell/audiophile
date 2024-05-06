@@ -12,6 +12,7 @@ import { raiseTotalPrice } from "../../store/totalPriceSlice";
 const AddToCartButton = ({ count, setCount, item }) => {
   const dispatch = useDispatch();
   const { itemCount } = useSelector((state) => state.itemCount);
+  const { cartItems } = useSelector((state) => state.cartItems);
   // const { cartItemCount } = useSelector((state) => state.cartItemCount);
   console.log(item);
   return (
@@ -19,11 +20,15 @@ const AddToCartButton = ({ count, setCount, item }) => {
       <Button
         variant="contained"
         color="secondary"
-        onClick={() => {
-          dispatch(startCartItems());
-          dispatch(addCartItems(item));
-          dispatch(raiseTotalPrice(count * item.price));
-          dispatch(raiseItemCount(count));
+        onClick={(itemId) => {
+          if (cartItems[itemId].item === undefined) {
+            startCartItems();
+          } else {
+            dispatch(startCartItems());
+            dispatch(addCartItems(item));
+            dispatch(raiseTotalPrice(count * item.price));
+            dispatch(raiseItemCount(count));
+          }
         }}
       >
         Add to Cart

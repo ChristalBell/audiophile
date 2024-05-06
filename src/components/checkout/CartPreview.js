@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Button } from "@mui/material";
 import { minusOne, addOne } from "../../store/itemCountSlice";
 import { lowerTotalPrice, raiseTotalPrice } from "../../store/totalPriceSlice";
+import SingleProductDisplay from "./SingleProductDisplay";
 
 const CartPreview = () => {
   // const { cartCount } = useSelector((state) => state.cartCount);
@@ -86,7 +87,7 @@ const CartPreview = () => {
                         >
                           -
                         </Button>
-                        <p>{itemCount}</p>
+                        {/* <p>{cartItemCount}</p> */}
                         <Button
                           onClick={() => {
                             dispatch(addOne());
@@ -103,9 +104,8 @@ const CartPreview = () => {
             );
           })
         ) : (
-          <div>
-            <p>hello world</p>
-          </div>
+          <p>only one item</p>
+          // <SingleProductDisplay cartItems={cartItems} itemCount={itemCount} />
         )}
       </div>
       <div

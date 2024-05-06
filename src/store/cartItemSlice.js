@@ -43,7 +43,7 @@ export const cartItemSlice = createSlice({
 export const {
   clearCartItems,
   addCartItems,
-  removeItems,
+  removeCartItems,
   startCartItems,
   raiseCountCartItems,
   lowerCountCartItems,
