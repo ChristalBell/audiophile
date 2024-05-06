@@ -40,7 +40,7 @@ const CartPreview = () => {
       <div className="working-div">
         {cartItems.length > 1 ? (
           cartItems.map((cartItems, item) => {
-            console.log(item);
+            // console.log(item);
             console.log(cartItems);
             return (
               <div
@@ -57,18 +57,18 @@ const CartPreview = () => {
                 >
                   <img
                     src=""
-                    alt={item.name}
+                    alt={cartItems.name}
                     style={{ height: "15vh", width: "15vw" }}
                   />
                   <div style={{ marginRight: "2rem" }}>
-                    <p>{item.name} </p>
+                    <p>{cartItems.name} </p>
                     <p
                       style={{
                         color: " hsl(0,0%,92%)",
                         fontWeight: "bold",
                       }}
                     >
-                      ${item.price}
+                      ${cartItems.price}
                     </p>
                   </div>
 
@@ -87,7 +87,7 @@ const CartPreview = () => {
                     >
                       -
                     </Button>
-                    <p> {itemCount}</p>
+                    {/* <p> {cartItemCount}</p> */}
                     <Button
                       onClick={() => {
                         dispatch(addOne());
