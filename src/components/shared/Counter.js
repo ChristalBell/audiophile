@@ -12,17 +12,20 @@ import {
   startCartItems,
 } from "../../store/cartItemSlice";
 
-const Counter = ({ count, setCount, itemId, item }) => {
-  const { cartItems } = useSelector((state) => state.cartItems);
+const Counter = ({ count, setCount, item }) => {
+  // const { cartItems } = useSelector((state) => state.cartItems);
   const dispatch = useDispatch();
+  console.log(item);
+  console.log(item.price);
   return (
     <div style={{ display: "flex" }}>
       <Button
         variant="contained"
         color="secondary"
-        onClick={() => {
+        onClick={(item) => {
           setCount(count - 1);
           dispatch(lowerCountCartItems(count));
+          dispatch(removeCartItems(item, count));
         }}
         // onClick={() => {
         //   if (cartItems[itemIndex].length === 1) {

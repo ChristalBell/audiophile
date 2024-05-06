@@ -38,17 +38,21 @@ const CartPreview = () => {
       </div>
 
       <div className="working-div">
-        {cartItems.length > 1 ? (
-          cartItems.map((cartItem) => {
+        {cartItems.length > 2 ? (
+          cartItems.map((cartItem, item) => {
+            console.log(item);
+            console.log(cartItems);
             return (
               <div
                 className="item-display"
                 style={{ display: "flex", alignItems: "center" }}
               >
-                {cartItems.map((item) => {
+                {cartItems.map((cartItem, item) => {
                   console.log(item);
+
                   return (
                     <div
+                      key={item}
                       className="mini-container"
                       style={{
                         display: "flex",
@@ -104,7 +108,8 @@ const CartPreview = () => {
             );
           })
         ) : (
-          <p>only one item</p>
+          <div> {cartItems[0]}</div>
+          // <p>only one item </p>
           // <SingleProductDisplay cartItems={cartItems} itemCount={itemCount} />
         )}
       </div>

@@ -5,11 +5,12 @@
 // import { lowerTotalPrice, raiseTotalPrice } from "../../store/totalPriceSlice";
 // import { Button } from "@mui/base";
 
-// const SingleProductDisplay = (cartItems, itemCount, ) => {
+// const SingleProductDisplay = (item, itemCount, cartItems) => {
 //   // const { cartItems } = useSelector((state) => state.cartItems);
 //   // const { itemCount } = useSelector((state) => state.itemCount);
 //   const dispatch = useDispatch();
 
+//   console.log(item);
 //   console.log(cartItems);
 
 //   return (
@@ -26,14 +27,14 @@
 //           alt={cartItem.item.image.mobile}
 //           style={{ height: "15vh", width: "15vw" }}
 //         /> */}
-//         <p>{cartItems[0].item.name} </p>
+//         <p>{item.name} </p>
 //         <p
 //           style={{
 //             color: " hsl(0,0%,92%)",
 //             fontWeight: "bold",
 //           }}
 //         >
-//           ${cartItems[0].item.price}
+//           ${cartItems[0].price}
 //         </p>
 //       </div>
 
@@ -47,7 +48,7 @@
 //         <Button
 //           onClick={() => {
 //             dispatch(minusOne());
-//             dispatch(lowerTotalPrice(cartItems[0].item.price));
+//             dispatch(lowerTotalPrice(cartItems[0].price));
 //           }}
 //         >
 //           -
@@ -56,7 +57,7 @@
 //         <Button
 //           onClick={() => {
 //             dispatch(addOne());
-//             dispatch(raiseTotalPrice(cartItems[0].item.price));
+//             dispatch(raiseTotalPrice(cartItems[0].price));
 //           }}
 //         >
 //           +

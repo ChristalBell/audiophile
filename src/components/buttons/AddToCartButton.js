@@ -15,20 +15,22 @@ const AddToCartButton = ({ count, setCount, item }) => {
   const { cartItems } = useSelector((state) => state.cartItems);
   // const { cartItemCount } = useSelector((state) => state.cartItemCount);
   console.log(item);
+  console.log(item.id);
   return (
     <div>
       <Button
         variant="contained"
         color="secondary"
-        onClick={(itemId) => {
-          if (cartItems[itemId].item === undefined) {
-            startCartItems();
-          } else {
-            dispatch(startCartItems());
-            dispatch(addCartItems(item));
-            dispatch(raiseTotalPrice(count * item.price));
-            dispatch(raiseItemCount(count));
-          }
+        onClick={() => {
+          addCartItems(item);
+          // if (cartItems.item === undefined) {
+          //   startCartItems();
+          // } else {
+          //   dispatch(startCartItems());
+          //   dispatch(addCartItems(item));
+          //   dispatch(raiseTotalPrice(count * item.price));
+          //   dispatch(raiseItemCount(count));
+          // }
         }}
       >
         Add to Cart

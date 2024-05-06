@@ -10,7 +10,7 @@ import Counter from "../shared/Counter";
 import { useState } from "react";
 import { Button } from "@mui/material";
 
-const ProductDetail = (props, itemId) => {
+const ProductDetail = (props) => {
   const itemName = props.match.params.name;
   let item = {};
   data.map((product) => {
@@ -56,9 +56,9 @@ const ProductDetail = (props, itemId) => {
               marginBottom: "2.5rem",
             }}
           >
-            <Counter count={count} setCount={setCount} itemId={itemId} />
+            <Counter count={count} setCount={setCount} item={item} />
 
-            <AddToCartButton count={count} item={item} itemId={itemId} />
+            <AddToCartButton count={count} item={item} />
           </div>
           <div className="features">
             <h2>Features</h2>
