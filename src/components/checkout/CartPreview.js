@@ -7,9 +7,9 @@ import { Button } from "@mui/material";
 import { minusOne, addOne } from "../../store/itemCountSlice";
 import { lowerTotalPrice, raiseTotalPrice } from "../../store/totalPriceSlice";
 import SingleProductDisplay from "./SingleProductDisplay";
+import Counter from "../shared/Counter";
 
 const CartPreview = () => {
-  // const { cartCount } = useSelector((state) => state.cartCount);
   // const { cartItemCount } = useSelector((state) => state.cartItemCount);
   const { cartItems } = useSelector((state) => state.cartItems);
   const { totalPrice } = useSelector((state) => state.totalPrice);
@@ -39,7 +39,7 @@ const CartPreview = () => {
 
       <div className="working-div">
         {cartItems.length > 2 ? (
-          cartItems.map((cartItem, item) => {
+          cartItems.map((cartItems, item) => {
             console.log(item);
             console.log(cartItems);
             return (
@@ -91,7 +91,7 @@ const CartPreview = () => {
                         >
                           -
                         </Button>
-                        {/* <p>{cartItemCount}</p> */}
+                        <p> specific item count</p>
                         <Button
                           onClick={() => {
                             dispatch(addOne());
@@ -108,8 +108,9 @@ const CartPreview = () => {
             );
           })
         ) : (
-          <div> {cartItems[0]}</div>
-          // <p>only one item </p>
+          <div>
+            <Counter count={itemCount} />
+          </div>
           // <SingleProductDisplay cartItems={cartItems} itemCount={itemCount} />
         )}
       </div>

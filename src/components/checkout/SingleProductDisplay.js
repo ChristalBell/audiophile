@@ -12,6 +12,7 @@
 
 //   console.log(item);
 //   console.log(cartItems);
+//   console.log(itemCount);
 
 //   return (
 //     <div

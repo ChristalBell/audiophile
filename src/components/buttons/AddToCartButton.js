@@ -15,7 +15,8 @@ const AddToCartButton = ({ count, setCount, item }) => {
   const { cartItems } = useSelector((state) => state.cartItems);
   // const { cartItemCount } = useSelector((state) => state.cartItemCount);
   console.log(item);
-  console.log(item.id);
+  console.log(item.name);
+  console.log(count);
   return (
     <div>
       <Button
@@ -23,6 +24,7 @@ const AddToCartButton = ({ count, setCount, item }) => {
         color="secondary"
         onClick={() => {
           addCartItems(item);
+          raiseCountCartItems(count);
           // if (cartItems.item === undefined) {
           //   startCartItems();
           // } else {
