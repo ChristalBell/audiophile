@@ -8,7 +8,6 @@ import ProductGallery from "./ProductGallery";
 import ProductRecommendation from "./ProductRecommendation";
 import Counter from "../shared/Counter";
 import { useState } from "react";
-import { Button } from "@mui/material";
 
 const ProductDetail = (props) => {
   const itemName = props.match.params.name;
@@ -57,7 +56,6 @@ const ProductDetail = (props) => {
             }}
           >
             <Counter count={count} setCount={setCount} item={item} />
-
             <AddToCartButton count={count} item={item} />
           </div>
           <div className="features">
