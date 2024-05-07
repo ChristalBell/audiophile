@@ -39,7 +39,7 @@ const CartPreview = () => {
 
       <div className="working-div">
         {cartItems.length > 1 ? (
-          cartItems.map((cartItems, item) => {
+          [cartItems].map((cartItems, item) => {
             // console.log(item);
             console.log(cartItems);
             return (
