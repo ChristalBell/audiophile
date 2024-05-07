@@ -5,7 +5,7 @@ import cartItemReducer from "./cartItemSlice";
 import totalPriceReducer from "./totalPriceSlice";
 
 const reducers = combineReducers({
-  cartItems: cartItemReducer,
+  cart: cartItemReducer,
   totalPrice: totalPriceReducer,
 });
 const persistConfig = {
@@ -15,8 +15,10 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, reducers);
 
-export default configureStore({
+export const store = configureStore({
   reducer: {
     persistedReducer,
   },
 });
+
+export const persistedStore = persistStore(store);
