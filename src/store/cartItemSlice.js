@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const cartItemSlice = createSlice({
-  name: "cart",
+  name: "cartItems",
   initialState: {
     cartItems: [
       {
-        cartItemDetails: {
+        cartItem: {
           price: 0,
           name: "",
           image: {
@@ -19,7 +19,7 @@ export const cartItemSlice = createSlice({
   reducers: {
     clearCartItems: (state) => {
       state.cartItems = {
-        cartItemDetails: { name: "", image: { mobile: "" }, price: 0 },
+        cartItem: { name: "", image: { mobile: "" }, price: 0 },
         cartItemCount: 0,
       };
     },

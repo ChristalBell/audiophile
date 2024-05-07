@@ -5,7 +5,7 @@ import cartItemReducer from "./cartItemSlice";
 import totalPriceReducer from "./totalPriceSlice";
 
 const reducers = combineReducers({
-  cart: cartItemReducer,
+  cartItems: cartItemReducer,
   totalPrice: totalPriceReducer,
 });
 const persistConfig = {

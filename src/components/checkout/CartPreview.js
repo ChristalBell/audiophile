@@ -40,7 +40,7 @@ const CartPreview = () => {
 
       <div className="working-div">
         {cartItems.length > 1 ? (
-          [cartItems].map((cartItems, item) => {
+          cartItems.map((cartItems, item) => {
             // console.log(cartItems);
             console.log(item);
             return (
@@ -58,7 +58,7 @@ const CartPreview = () => {
                 >
                   <img
                     src=""
-                    alt={item.name}
+                    alt={cartItems.cartItem.name}
                     style={{ height: "15vh", width: "15vw" }}
                   />
                   <div style={{ marginRight: "2rem" }}>
