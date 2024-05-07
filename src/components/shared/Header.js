@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 import CartPreview from "../checkout/CartPreview";
 
 const Header = () => {
-  const { itemCount } = useSelector((state) => state.itemCount);
+  // const { cartItemCount } = useSelector((state) => state.cartItemCount);
   return (
     <>
       <div className="header">
@@ -105,11 +105,11 @@ const Header = () => {
 
         <div className="cart-link">
           <Button>
-            <Badge badgeContent={itemCount} color="secondary">
-              <Link href="/cart" color="inherit">
-                <img src="../assets/shared/icon-cart.svg" alt="cart" />
-              </Link>
-            </Badge>
+            {/* <Badge badgeContent={cartItemCount} color="secondary"> */}
+            <Link href="/cart" color="inherit">
+              <img src="../assets/shared/icon-cart.svg" alt="cart" />
+            </Link>
+            {/* </Badge> */}
           </Button>
           <div className="preview-dropdown">
             <CartPreview />

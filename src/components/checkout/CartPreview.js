@@ -15,6 +15,7 @@ const CartPreview = () => {
   const { totalPrice } = useSelector((state) => state.totalPrice);
   const { itemCount } = useSelector((state) => state.itemCount);
   const dispatch = useDispatch();
+  console.log(cartItems);
 
   return (
     <div
@@ -40,15 +41,15 @@ const CartPreview = () => {
       <div className="working-div">
         {cartItems.length > 1 ? (
           [cartItems].map((cartItems, item) => {
-            // console.log(item);
-            console.log(cartItems);
+            // console.log(cartItems);
+            console.log(item);
             return (
               <div
+                key={item}
                 className="item-display"
                 style={{ display: "flex", alignItems: "center" }}
               >
                 <div
-                  key={item}
                   className="mini-container"
                   style={{
                     display: "flex",
@@ -57,18 +58,18 @@ const CartPreview = () => {
                 >
                   <img
                     src=""
-                    alt={cartItems.name}
+                    alt={item.name}
                     style={{ height: "15vh", width: "15vw" }}
                   />
                   <div style={{ marginRight: "2rem" }}>
-                    <p>{cartItems.name} </p>
+                    <p>{item.name} </p>
                     <p
                       style={{
                         color: " hsl(0,0%,92%)",
                         fontWeight: "bold",
                       }}
                     >
-                      ${cartItems.price}
+                      ${item.price}
                     </p>
                   </div>
 
@@ -82,7 +83,7 @@ const CartPreview = () => {
                     <Button
                       onClick={() => {
                         dispatch(minusOne());
-                        dispatch(lowerTotalPrice(cartItems.price));
+                        dispatch(lowerTotalPrice(item.price));
                       }}
                     >
                       -
@@ -91,7 +92,7 @@ const CartPreview = () => {
                     <Button
                       onClick={() => {
                         dispatch(addOne());
-                        dispatch(raiseTotalPrice(cartItems.price));
+                        dispatch(raiseTotalPrice(item.price));
                       }}
                     >
                       +
