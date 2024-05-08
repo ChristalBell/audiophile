@@ -10,10 +10,9 @@ import SingleProductDisplay from "./SingleProductDisplay";
 import Counter from "../shared/Counter";
 
 const CartPreview = () => {
-  // const { cartItemCount } = useSelector((state) => state.cartItemCount);
   const { cartItems } = useSelector((state) => state.cartItems);
   const { totalPrice } = useSelector((state) => state.totalPrice);
-  const { itemCount } = useSelector((state) => state.itemCount);
+
   const dispatch = useDispatch();
   console.log(cartItems);
 
@@ -40,12 +39,11 @@ const CartPreview = () => {
 
       <div className="working-div">
         {cartItems.length > 1 ? (
-          cartItems.map((cartItems, item) => {
-            // console.log(cartItems);
+          cartItems.map((item) => {
             console.log(item);
             return (
               <div
-                key={item}
+                key={item.id}
                 className="item-display"
                 style={{ display: "flex", alignItems: "center" }}
               >
@@ -58,7 +56,7 @@ const CartPreview = () => {
                 >
                   <img
                     src=""
-                    alt={cartItems.cartItem.name}
+                    alt={item.name}
                     style={{ height: "15vh", width: "15vw" }}
                   />
                   <div style={{ marginRight: "2rem" }}>
@@ -129,7 +127,7 @@ const CartPreview = () => {
           }}
         >
           <p style={{ textTransform: "uppercase" }}>Total $ {totalPrice}</p>
-          <p> total count {itemCount} </p>
+          <p> total count </p>
         </div>
 
         <div style={{ alignSelf: "center" }}>
