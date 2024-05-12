@@ -12,9 +12,7 @@ import Counter from "../shared/Counter";
 const CartPreview = () => {
   const { cartItems } = useSelector((state) => state.cartItems);
   const { totalPrice } = useSelector((state) => state.totalPrice);
-
   const dispatch = useDispatch();
-  console.log(cartItems);
 
   return (
     <div
@@ -40,7 +38,8 @@ const CartPreview = () => {
       <div className="working-div">
         {cartItems.length > 1 ? (
           cartItems.map((item) => {
-            console.log(item);
+            console.log(cartItems);
+
             return (
               <div
                 key={item.id}
@@ -103,9 +102,7 @@ const CartPreview = () => {
         ) : (
           <div>
             <p>one item</p>
-            {/* <Counter /> */}
           </div>
-          // <SingleProductDisplay cartItems={cartItems} itemCount={itemCount} />
         )}
       </div>
 
