@@ -39,7 +39,7 @@ const CartPreview = () => {
         {cartProduct.length > 1 ? (
           cartProduct.map((cartProduct) => {
             return (
-              <div style={{ display: "flex" }}>
+              <div key={cartProduct.id} style={{ display: "flex" }}>
                 <img
                   src={cartProduct.image.mobile}
                   alt={cartProduct.name}
