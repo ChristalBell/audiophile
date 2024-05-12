@@ -10,10 +10,10 @@ import SingleProductDisplay from "./SingleProductDisplay";
 import Counter from "../shared/Counter";
 
 const CartPreview = () => {
-  const { cartItems } = useSelector((state) => state.cartItems);
+  const { cartProduct } = useSelector((state) => state.cartItems);
   const { totalPrice } = useSelector((state) => state.totalPrice);
   const dispatch = useDispatch();
-
+  console.log(cartProduct);
   return (
     <div
       className="container"
@@ -35,73 +35,24 @@ const CartPreview = () => {
         <ClearCartButton />
       </div>
 
-      <div className="working-div">
-        {cartItems.length > 1 ? (
-          cartItems.map((item) => {
-            console.log(cartItems);
-
+      <div>
+        {cartProduct.length > 1 ? (
+          cartProduct.map((cartProduct) => {
             return (
-              <div
-                key={item.id}
-                className="item-display"
-                style={{ display: "flex", alignItems: "center" }}
-              >
-                <div
-                  className="mini-container"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                >
-                  <img
-                    src=""
-                    alt={item.name}
-                    style={{ height: "15vh", width: "15vw" }}
-                  />
-                  <div style={{ marginRight: "2rem" }}>
-                    <p>{item.name} </p>
-                    <p
-                      style={{
-                        color: " hsl(0,0%,92%)",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      ${item.price}
-                    </p>
-                  </div>
-
-                  <div
-                    className="counter-button"
-                    style={{
-                      display: "flex",
-                      backgroundColor: "hsl(0, 0%, 98%)",
-                    }}
-                  >
-                    <Button
-                      onClick={() => {
-                        dispatch(minusOne());
-                        dispatch(lowerTotalPrice(item.price));
-                      }}
-                    >
-                      -
-                    </Button>
-                    {/* <p> {cartItemCount}</p> */}
-                    <Button
-                      onClick={() => {
-                        dispatch(addOne());
-                        dispatch(raiseTotalPrice(item.price));
-                      }}
-                    >
-                      +
-                    </Button>
-                  </div>
-                </div>
+              <div style={{ display: "flex" }}>
+                <img
+                  src={cartProduct.image.mobile}
+                  alt={cartProduct.name}
+                  style={{ height: "8vh", width: "8vw" }}
+                />
+                <p>{cartProduct.name}</p>
+                <p>${cartProduct.price}</p>
               </div>
             );
           })
         ) : (
           <div>
-            <p>one item</p>
+            <p>working</p>
           </div>
         )}
       </div>
