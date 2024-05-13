@@ -4,7 +4,7 @@ export const cartItemSlice = createSlice({
   name: "cartItems",
   initialState: {
     cartProduct: [
-      { id: 0, price: 0, name: "", image: { mobile: "" }, itemCount: 0 },
+      { itemCount: 0, id: 0, price: 0, name: "", image: { mobile: "" } },
     ],
   },
 
@@ -18,8 +18,7 @@ export const cartItemSlice = createSlice({
           image: {
             mobile: "",
           },
-
-          cartItemCount: 0,
+          itemCount: 0,
         },
       ];
     },

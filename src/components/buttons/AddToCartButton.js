@@ -11,6 +11,7 @@ const AddToCartButton = ({ count, setCount, item }) => {
   const dispatch = useDispatch();
 
   // console.log(item);
+  console.log(count);
 
   return (
     <div>

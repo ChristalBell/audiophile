@@ -1,13 +1,12 @@
 import React from "react";
-import data from "../../data.json";
 import ClearCartButton from "../buttons/ClearCartButton";
 import CheckoutButton from "../buttons/CheckoutButton";
 import { useDispatch, useSelector } from "react-redux";
-import { Button } from "@mui/material";
 import { minusOne, addOne } from "../../store/itemCountSlice";
 import { lowerTotalPrice, raiseTotalPrice } from "../../store/totalPriceSlice";
 import SingleProductDisplay from "./SingleProductDisplay";
 import Counter from "../shared/Counter";
+import { raiseCountCartItems } from "../../store/cartItemSlice";
 
 const CartPreview = () => {
   const { cartProduct } = useSelector((state) => state.cartItems);
@@ -36,25 +35,20 @@ const CartPreview = () => {
       </div>
 
       <div>
-        {cartProduct.length > 1 ? (
-          cartProduct.map((cartProduct) => {
-            return (
-              <div key={cartProduct.id} style={{ display: "flex" }}>
-                <img
-                  src={cartProduct.image.mobile}
-                  alt={cartProduct.name}
-                  style={{ height: "8vh", width: "8vw" }}
-                />
-                <p>{cartProduct.name}</p>
-                <p>${cartProduct.price}</p>
-              </div>
-            );
-          })
-        ) : (
-          <div>
-            <p>working</p>
+        {cartProduct.map((cartProduct) => (
+          <div
+            className="can-only-have-one-main-div"
+            style={{ display: "flex" }}
+          >
+            <img
+              src={cartProduct.image.mobile}
+              alt={cartProduct.name}
+              style={{ height: "8vh", width: "8vw" }}
+            />
+            <p> {cartProduct.name} </p>
+            <p style={{ color: "blue" }}>{cartProduct.itemCount} </p>
           </div>
-        )}
+        ))}
       </div>
 
       <div

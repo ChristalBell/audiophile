@@ -1,9 +1,11 @@
 import React from "react";
 import { Button } from "@mui/material";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { raiseCountCartItems } from "../../store/cartItemSlice";
 
 const Counter = ({ count, setCount, item }) => {
   // const { cartItemCount } = useSelector((state) => state.cartItemCount);
+  const dispatch = useDispatch();
   return (
     <div style={{ display: "flex" }}>
       <Button
