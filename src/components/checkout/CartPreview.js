@@ -2,17 +2,19 @@ import React from "react";
 import ClearCartButton from "../buttons/ClearCartButton";
 import CheckoutButton from "../buttons/CheckoutButton";
 import { useDispatch, useSelector } from "react-redux";
-import { minusOne, addOne } from "../../store/itemCountSlice";
+import { minusOne, addOne } from "../../store/globalCountSlice";
 import { lowerTotalPrice, raiseTotalPrice } from "../../store/totalPriceSlice";
 import SingleProductDisplay from "./SingleProductDisplay";
 import Counter from "../shared/Counter";
 import { raiseCountCartItems } from "../../store/cartItemSlice";
 
 const CartPreview = () => {
-  const { cartProduct } = useSelector((state) => state.cartItems);
+  const { cartItems } = useSelector((state) => state.cartItems);
   const { totalPrice } = useSelector((state) => state.totalPrice);
+  const { globalCount } = useSelector((state) => state.globalCount);
   const dispatch = useDispatch();
-  console.log(cartProduct);
+  console.log(cartItems);
+  console.log(globalCount);
   return (
     <div
       className="container"
@@ -28,25 +30,25 @@ const CartPreview = () => {
     >
       <div className="top" style={{ display: "flex" }}>
         <p style={{ marginRight: "2rem" }}>
-          Final Cart Count
+          {globalCount}
           <span style={{ color: "hsl(24, 66%, 55%)" }}>(some number)</span>
         </p>
         <ClearCartButton />
       </div>
 
       <div>
-        {cartProduct.map((cartProduct) => (
+        {cartItems.map((cartProduct) => (
           <div
             className="can-only-have-one-main-div"
             style={{ display: "flex" }}
           >
             <img
-              src={cartProduct.image.mobile}
-              alt={cartProduct.name}
+              src={cartProduct.item.image.mobile}
+              alt={cartProduct.item.name}
               style={{ height: "8vh", width: "8vw" }}
             />
-            <p> {cartProduct.name} </p>
-            <p style={{ color: "blue" }}>{cartProduct.itemCount} </p>
+            <p> {cartProduct.item.name} </p>
+            <p style={{ color: "blue" }}>{cartProduct.item.itemCount} </p>
           </div>
         ))}
       </div>
